@@ -655,7 +655,7 @@ a {
   color: #4d4d4d;
 }
 .article {
-  margin: 30px 40px 30px 40px;
+  margin: 30px 40px 50px 40px;
   padding: 30px 75px 30px 40px;
   position: relative;
   border-bottom: 1px solid #808080;
@@ -1257,8 +1257,8 @@ pre .javascript .function {
   text-shadow: 0 1px #fff;
   text-align: center;
   position: relative;
-  top: 5px;
-  padding-top: 20px;
+  padding-top: 5px;
+  border-top: 1px dotted #808080;
 }
 .share {
   padding: 0px 75px 30px 40px;
