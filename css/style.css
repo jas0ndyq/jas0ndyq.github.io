@@ -1251,20 +1251,14 @@ pre .keyword,
 pre .javascript .function {
   color: #f92672;
 }
-#footer {
+#footer .outer {
   font-size: 12px;
   font-family: Menlo, Monaco, "Andale Mono", "lucida console", "Courier New", monospace;
   text-shadow: 0 1px #fff;
-  margin: 10px 40px 10px 40px;
-  padding-bottom: 30px;
   text-align: center;
   position: relative;
-}
-.footer-left {
-  float: left;
-}
-.footer-right {
-  float: right;
+  top: 5px;
+  padding-top: 20px;
 }
 .share {
   padding: 0px 75px 30px 40px;
