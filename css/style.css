@@ -193,11 +193,11 @@ a {
 }
 #container #mobile-nav #header .profilepic {
   position: relative;
-  margin-top: 70%;
+  margin-top: 50%;
 }
 #container #mobile-nav #header .header-author {
   position: relative;
-  margin-top: 50%;
+  margin-top: 20%;
   font-family: "Helvetica Neue LT Pro-Th", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 #container #mobile-nav #header .header-menu {
