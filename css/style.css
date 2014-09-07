@@ -1251,12 +1251,20 @@ pre .keyword,
 pre .javascript .function {
   color: #f92672;
 }
+#footer {
+  height: 50px;
+  margin-top: 5px;
+}
 #footer .outer {
   font-size: 12px;
   font-family: Menlo, Monaco, "Andale Mono", "lucida console", "Courier New", monospace;
   text-shadow: 0 1px #fff;
+  width: 100%;
+  opacity: 0.8;
   text-align: center;
-  position: relative;
+  position: absolute;
+  bottom: 0px;
+  right: 15px;
   padding-top: 5px;
   border-top: 1px dotted #808080;
 }
