@@ -201,7 +201,7 @@ a {
 }
 #container #mobile-nav #header .header-menu {
   margin-top: 10px;
-  margin-left: 30%;
+  margin-left: 50%;
   text-align: center;
 }
 #container #mobile-nav #header .header-menu ul {
@@ -212,13 +212,12 @@ a {
   -webkit-border-radius: 50px;
   border-radius: 50px;
   width: 100px;
-  margin-top: 5px;
+  margin-top: 10px;
   margin-bottom: 5px;
   margin-left: 10px;
   text-align: center;
   font-size: 30px;
   color: #fff;
-  float: left;
 }
 #container .left-col {
   background-image: url("images/back1.jpg");
