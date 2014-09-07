@@ -197,7 +197,7 @@ a {
 }
 #container #mobile-nav #header .header-author {
   position: relative;
-  margin-top: 45px;
+  margin-top: 75px;
 }
 #container #mobile-nav #header .header-menu {
   margin: 10px;
@@ -207,8 +207,15 @@ a {
   float: left;
 }
 #container #mobile-nav #header .header-menu li {
-  display: inline-block;
-  margin: 3px;
+  border: 1px solid;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
+  width: 70px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
 }
 #container .left-col {
   background-image: url("images/back1.jpg");
