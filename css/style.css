@@ -196,6 +196,10 @@ a {
 #container #mobile-nav #header {
   padding: 10px 0 0 0;
 }
+#container #mobile-nav #header .profilepic {
+  position: relative;
+  top: 15px;
+}
 #container #mobile-nav #header .header-menu {
   margin: 10px;
 }
