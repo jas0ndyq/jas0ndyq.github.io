@@ -258,7 +258,7 @@ a {
   font-size: 25px;
   font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #eee;
-  margin-left: 18%;
+  margin-left: 20%;
 }
 #container .mid-col {
   position: absolute;
@@ -457,7 +457,7 @@ a {
   opacity: 1;
 }
 #header .header-nav {
-  margin-top: 100px;
+  margin-top: 20%;
   text-align: center;
 }
 #header .header-nav .social {
