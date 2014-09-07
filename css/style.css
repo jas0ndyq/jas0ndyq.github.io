@@ -403,8 +403,9 @@ a {
   color: #eee;
 }
 #header .profilepic {
-  margin-top: -70px;
+  margin-top: -25%;
   text-align: center;
+  margin-left: 0;
 }
 #header .profilepic img {
   -webkit-border-radius: 50%;
@@ -418,7 +419,10 @@ a {
 }
 #header .header-author {
   text-align: center;
-  margin: 0.5em 0;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  margin-right: 0;
+  margin-left: 0;
   font-family: "Helvetica Neue LT Pro-Th", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, serif;
   font-size: 50px;
 }
