@@ -180,7 +180,7 @@ a {
   }
 }
 #container {
-  font-family: "Helvetica Neue LT Pro-Th", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, serif;
+  font-family: "Microsoft YaHei", "Helvetica Neue LT Pro-Th", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, serif;
   position: relative;
   min-height: 100%;
 }
@@ -198,11 +198,11 @@ a {
 #container #mobile-nav #header .header-author {
   position: relative;
   margin-top: 75px;
-  font-family: "Helvetica Neue LT Pro-Th", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, serif;
+  font-family: "Helvetica Neue LT Pro-Th", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 #container #mobile-nav #header .header-menu {
   margin-top: 10px;
-  margin-left: 30%;
+  margin-left: 10px;
   text-align: center;
 }
 #container #mobile-nav #header .header-menu ul {
@@ -218,7 +218,6 @@ a {
   margin-left: 10px;
   text-align: center;
   font-size: 20px;
-  float: left;
   color: #fff;
 }
 #container .left-col {
