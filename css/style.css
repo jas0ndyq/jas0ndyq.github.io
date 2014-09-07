@@ -187,18 +187,16 @@ a {
 #container #mobile-nav {
   display: none;
 }
-#container #mobile-nav .overlay {
-  height: 70%;
-  position: absolute;
-  width: 100%;
-  background: #4d4d4d;
-}
 #container #mobile-nav #header {
   padding: 10px 0 0 0;
 }
 #container #mobile-nav #header .profilepic {
   position: relative;
   top: 70px;
+}
+#container #mobile-nav #header .header-author {
+  position: relative;
+  margin-top: 10px;
 }
 #container #mobile-nav #header .header-menu {
   margin: 10px;
