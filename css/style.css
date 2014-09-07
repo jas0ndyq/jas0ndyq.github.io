@@ -188,7 +188,7 @@ a {
   display: none;
 }
 #container #mobile-nav .overlay {
-  height: 110px;
+  height: 0px;
   position: absolute;
   width: 100%;
   background: #4d4d4d;
@@ -204,7 +204,7 @@ a {
 }
 #container #mobile-nav #header .header-menu ul {
   text-align: center;
-  cursor: default;
+  float: left;
 }
 #container #mobile-nav #header .header-menu li {
   display: inline-block;
