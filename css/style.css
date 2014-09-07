@@ -201,6 +201,7 @@ a {
   font-family: "Helvetica Neue LT Pro-Th", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 #container #mobile-nav #header .header-menu {
+  width: 500px;
   margin: 0 auto;
   text-align: center;
 }
