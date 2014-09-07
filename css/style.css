@@ -258,7 +258,7 @@ a {
   font-size: 25px;
   font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #eee;
-  margin-left: 50px;
+  margin-left: 20%;
 }
 #container .mid-col {
   position: absolute;
@@ -271,12 +271,10 @@ a {
 @media screen and (max-width: 800px) {
   #container .left-col {
     display: none;
-    width: 300px;
   }
   #container .mid-col {
-    left: 300px;
+    left: 0;
     background: #ffe9d7;
-    width: auto;
   }
   #container .header-subtitle {
     padding: 0 24px;
@@ -436,7 +434,7 @@ a {
 }
 #header .header-menu {
   font-weight: 300;
-  margin-left: 100px;
+  margin-left: 35%;
   margin-top: 90px;
   margin-bottom: 40px;
 }
