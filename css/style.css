@@ -229,7 +229,7 @@ a {
   background-image: url("images/back1.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  width: 400px;
+  width: 30%;
   position: fixed;
   opacity: 1;
   -webkit-transition: all 0.2s ease-in;
@@ -265,7 +265,7 @@ a {
   right: 0;
   min-height: 100%;
   background: #ffe9d7;
-  left: 400px;
+  left: 30%;
   width: auto;
 }
 @media screen and (max-width: 800px) {
