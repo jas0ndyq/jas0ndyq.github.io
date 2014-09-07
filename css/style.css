@@ -188,7 +188,7 @@ a {
   display: none;
 }
 #container #mobile-nav .overlay {
-  height: 300%;
+  height: 70%;
   position: absolute;
   width: 100%;
   background: #4d4d4d;
@@ -198,7 +198,7 @@ a {
 }
 #container #mobile-nav #header .profilepic {
   position: relative;
-  top: 40px;
+  top: 70px;
 }
 #container #mobile-nav #header .header-menu {
   margin: 10px;
