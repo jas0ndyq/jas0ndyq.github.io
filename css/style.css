@@ -223,7 +223,7 @@ a {
   color: #fff;
 }
 #container #mobile-nav #header .header-menu li a:hover {
-  opacity: 0;
+  opacity: 0.8;
 }
 #container .left-col {
   background-image: url("images/back1.jpg");
@@ -274,6 +274,7 @@ a {
   }
   #container .mid-col {
     left: 0;
+    background: #ffe1ff;
   }
   #container .header-subtitle {
     padding: 0 24px;
