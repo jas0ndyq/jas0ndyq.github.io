@@ -264,17 +264,19 @@ a {
   position: absolute;
   right: 0;
   min-height: 100%;
-  background: #ffe1ff;
+  background: #ffe9d7;
   left: 400px;
   width: auto;
 }
 @media screen and (max-width: 800px) {
   #container .left-col {
     display: none;
+    width: 76%;
   }
   #container .mid-col {
     left: 0;
     background: #ffe9d7;
+    width: auto;
   }
   #container .header-subtitle {
     padding: 0 24px;
