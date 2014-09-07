@@ -201,12 +201,12 @@ a {
   font-family: "Helvetica Neue LT Pro-Th", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 #container #mobile-nav #header .header-menu {
-  margin-top: 10px;
-  margin-left: 30%;
+  margin: 0 auto;
   text-align: center;
 }
 #container #mobile-nav #header .header-menu ul {
   text-align: center;
+  margin: 0 auto;
 }
 #container #mobile-nav #header .header-menu li {
   border: 1px solid;
