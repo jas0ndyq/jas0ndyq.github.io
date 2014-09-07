@@ -271,10 +271,10 @@ a {
 @media screen and (max-width: 800px) {
   #container .left-col {
     display: none;
-    width: 76%;
+    width: 300px;
   }
   #container .mid-col {
-    left: 0;
+    left: 300px;
     background: #ffe9d7;
     width: auto;
   }
