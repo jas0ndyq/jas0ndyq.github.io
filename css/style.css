@@ -222,6 +222,9 @@ a {
   float: left;
   color: #fff;
 }
+#container #mobile-nav #header .header-menu li a:hover {
+  opacity: 0;
+}
 #container .left-col {
   background-image: url("images/back1.jpg");
   background-repeat: no-repeat;
