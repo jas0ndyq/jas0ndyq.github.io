@@ -188,16 +188,13 @@ a {
   display: none;
 }
 #container #mobile-nav .overlay {
-  height: 0px;
+  height: 50px;
   position: absolute;
   width: 100%;
   background: #4d4d4d;
 }
 #container #mobile-nav #header {
   padding: 10px 0 0 0;
-}
-#container #mobile-nav #header .profilepic {
-  position: relative;
 }
 #container #mobile-nav #header .header-menu {
   margin: 10px;
