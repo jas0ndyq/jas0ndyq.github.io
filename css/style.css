@@ -188,7 +188,7 @@ a {
   display: none;
 }
 #container #mobile-nav .overlay {
-  height: 50px;
+  height: 300%;
   position: absolute;
   width: 100%;
   background: #4d4d4d;
