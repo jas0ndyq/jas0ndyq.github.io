@@ -201,7 +201,8 @@ a {
 }
 #container #mobile-nav #header .header-menu {
   margin-top: 10px;
-  margin-right: 25%;
+  margin-left: 25%;
+  margin-bottom: 10px;
   text-align: center;
 }
 #container #mobile-nav #header .header-menu ul {
@@ -213,11 +214,11 @@ a {
   border-radius: 50px;
   width: 150px;
   margin-top: 10px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   margin-left: 10px;
   text-align: center;
   font-size: 30px;
-  float: right;
+  float: left;
   color: #fff;
 }
 #container .left-col {
