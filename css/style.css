@@ -210,12 +210,13 @@ a {
   border: 1px solid;
   -webkit-border-radius: 25px;
   border-radius: 25px;
-  width: 70px;
+  width: 100px;
   margin-top: 5px;
   margin-bottom: 5px;
   text-align: center;
   font-size: 20px;
   color: #fff;
+  float: left;
 }
 #container .left-col {
   background-image: url("images/back1.jpg");
