@@ -189,6 +189,7 @@ a {
 }
 #container #mobile-nav #header {
   padding: 10px 0 0 0;
+  background: url("images/back1.jpg") no-repeat center;
 }
 #container #mobile-nav #header .profilepic {
   position: relative;
@@ -196,7 +197,7 @@ a {
 }
 #container #mobile-nav #header .header-author {
   position: relative;
-  margin-top: 10px;
+  margin-top: 45px;
 }
 #container #mobile-nav #header .header-menu {
   margin: 10px;
