@@ -310,7 +310,7 @@ a {
     border-radius: 0;
     color: #666;
     background: none;
-    height: auto;
+    height: 5px;
     float: right;
     padding: 0;
     margin-right: 30px;
