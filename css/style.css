@@ -310,7 +310,7 @@ a {
     color: #666;
     background: none;
     height: auto;
-    float: left;
+    float: right;
     padding: 0;
     margin-right: 30px;
     margin-top: 0;
@@ -374,7 +374,6 @@ a {
   #container .archives-wrap .archive-year-wrap {
     position: relative;
     padding: 0 0 0 0;
-    margin-bottom: 50px;
   }
   #container .archives-wrap .archive-year-wrap a {
     padding: 0 0 0 0;
