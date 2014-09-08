@@ -313,6 +313,9 @@ a {
     float: left;
     padding: 0;
     margin-right: 10px;
+    margin-top: 0;
+    margin-left: 0;
+    margin-bottom: 10px;
   }
   #container .article .article-meta .article-tag-list {
     margin-top: 7px;
