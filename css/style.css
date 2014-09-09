@@ -1294,7 +1294,7 @@ pre .javascript .function {
   text-shadow: 0 1px #fff;
   width: 99%;
   opacity: 0.8;
-  text-align: center;
+  text-align: left;
   position: absolute;
   bottom: 0px;
   right: 0;
@@ -1309,15 +1309,14 @@ pre .javascript .function {
 #footer .outer .CC a:hover {
   color: #ca8d72;
 }
+#footer .outer .CC .mykey {
+  margin-top: 5px;
+}
 #footer .outer .footer-left {
   float: left;
 }
 #footer .outer .footer-left a:hover {
   color: #ca8d72;
-}
-#footer .outer .mykey {
-  float: right;
-  margin-top: 10px;
 }
 .share {
   padding: 0px 75px 30px 40px;
