@@ -1294,7 +1294,7 @@ pre .javascript .function {
   text-shadow: 0 1px #fff;
   width: 99%;
   opacity: 0.8;
-  text-align: left;
+  text-align: center;
   position: absolute;
   bottom: 0px;
   right: 0;
@@ -1316,9 +1316,8 @@ pre .javascript .function {
   color: #ca8d72;
 }
 #footer .outer .mykey {
-  float: left;
+  float: right;
   margin-top: 10px;
-  margin-left: -53%;
 }
 .share {
   padding: 0px 75px 30px 40px;
