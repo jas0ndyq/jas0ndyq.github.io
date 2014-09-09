@@ -419,8 +419,9 @@ a {
   -webkit-border-radius: 50%;
   width: 80px;
   height: 80px;
-  border: 1px solid #fff;
-  background: #88acdb;
+  border: 1px solid #808080;
+  background: #ff0;
+  opacity: 0.9;
 }
 #header .header-author {
   text-align: center;
