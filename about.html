@@ -9,66 +9,35 @@
   
   <title>jas0ndyq</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="��������
+  <meta name="description" content="about me
 
 
-
-function myFunc()
-{
-var x = '';
-var day = new Date().getDay();
-switch (day)
-{
-case 0:
-	x = 'Today is Sunday!';
-	break;
-case 1:
-	x = 'Today is Monday__~_';
-	break;
-case 2:
-	x = 'Today is">
+.section { text-align: center; font: 50px 'Microsoft Yahei'; color: #fff; }
+.section1 {background: url(images/1.1.jpg) center no-repeat;}
+.section2 {background: url(images/2.1.jpg) cent">
 <meta property="og:type" content="website">
 <meta property="og:title" content="jas0ndyq">
 <meta property="og:url" content="http://yoursite.com/about.html">
 <meta property="og:site_name" content="jas0ndyq">
-<meta property="og:description" content="��������
+<meta property="og:description" content="about me
 
 
-
-function myFunc()
-{
-var x = '';
-var day = new Date().getDay();
-switch (day)
-{
-case 0:
-	x = 'Today is Sunday!';
-	break;
-case 1:
-	x = 'Today is Monday__~_';
-	break;
-case 2:
-	x = 'Today is">
+.section { text-align: center; font: 50px 'Microsoft Yahei'; color: #fff; }
+.section1 {background: url(images/1.1.jpg) center no-repeat;}
+.section2 {background: url(images/2.1.jpg) cent">
+<meta property="og:image" content="images/144.png">
+<meta property="og:image" content="images/home.png">
+<meta property="og:image" content="images/weibo.png">
+<meta property="og:image" content="images/twitter.png">
+<meta property="og:image" content="images/git.png">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jas0ndyq">
-<meta name="twitter:description" content="��������
+<meta name="twitter:description" content="about me
 
 
-
-function myFunc()
-{
-var x = '';
-var day = new Date().getDay();
-switch (day)
-{
-case 0:
-	x = 'Today is Sunday!';
-	break;
-case 1:
-	x = 'Today is Monday__~_';
-	break;
-case 2:
-	x = 'Today is">
+.section { text-align: center; font: 50px 'Microsoft Yahei'; color: #fff; }
+.section1 {background: url(images/1.1.jpg) center no-repeat;}
+.section2 {background: url(images/2.1.jpg) cent">
 
   
     <link rel="alternative" href="/atom.xml" title="jas0ndyq" type="application/atom+xml">
@@ -182,47 +151,188 @@ case 2:
     
     <div class="article-entry" itemprop="articleBody">
       
-        <!DOCTYPE>
-<html>
-<body>
-<button onclick="myFunc()">��������</button>
-<p id="demo"></p>
+        <!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>about me</title>
+<link rel="stylesheet" href="css/jquery.fullPage.css">
+<style>
+.section { text-align: center; font: 50px "Microsoft Yahei"; color: #fff; }
+.section1 {background: url(images/1.1.jpg) center no-repeat;}
+.section2 {background: url(images/2.1.jpg) center no-repeat; }
+.section2 p { position: relative; left: -120%;}
+.section3 {background: url(images/3.1.jpg) center no-repeat;}
+.section3 p { position: relative; bottom: -120%;}
+.section4 {background: url(images/4.1.jpg) center no-repeat;}
+.section4 p { display: none;}
+.section5 {background: url(images/5.1.jpg) center no-repeat;}
+.section5 p {display: none;}
+.section6 {background: url(images/6.1.jpg) center no-repeat;}
+.section6 p { position: relative; bottom: -120%;}
+.other {
+	text-align: left;
+	font-size: 15px; 
+	left: -120%; 
+	width: 100%; 
+	margin: 0 auto;
+	text-decoration: none; 
 
+	position: relative;}
+.other2 {
+	text-align: left;
+	font-size: 15px; 
+	right: -120%; 
+	width: 100%; 
+
+	text-decoration: none; 
+
+	position: relative;
+}
+.section6 ul {float: left; list-style-type: none; position: relative; left: 35%;}
+.section6 li {float: left; margin-left: 40px;}
+a.git {opacity: 0.5;}
+.logo {position: relative; bottom: -120%;}
+
+
+</style>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/jquery-ui-1.10.3.min.js"></script>
+<script src="js/jquery.fullPage.min.js"></script>
 <script>
-function myFunc()
-{
-var x = "";
-var day = new Date().getDay();
-switch (day)
-{
-case 0:
-	x = "Today is Sunday!";
-	break;
-case 1:
-	x = "Today is Monday__~_";
-	break;
-case 2:
-	x = "Today is Tuesday!";
-	break;
-case 3:
-	x = "Today is Wednesday!";
-	break;
-case 4:
-	x = "Today is Thrusday!";
-	break;
-case 5:
-  x="Today it's Friday";
-  break;
-case 6:
-  x="Today it's Saturday";
-  break;
-}
-document.getElementById("demo").innerHTML = x
-}
+$(document).ready(function() {
+	$.fn.fullpage({
+		slidesColor: ['#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF'],
+		anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6'],
+		navigation: true,
+		paddingTop: "3%",
+		afterLoad: function(anchorLink, index){
+			if(index == 2){
+				$('.section2').find('p').delay(500).animate({
+					left: '0'
+				}, 1500, 'easeOutExpo');
+			}
+			if(index == 3){
+				$('.section3').find('p').delay(500).animate({
+					bottom: '0'
+				}, 1500, 'easeOutExpo');
+			}
+			if(index == 4){
+				$('.section4').find('p').fadeIn(2000);
+			}
+			if(index == 5){
+				$('.section5').find('p').fadeIn(2000);
+			}
+			if(index == 6){
+				$('.section6').find('p').delay(500).animate({
+					bottom: '0'
+				}, 1500, 'easeOutExpo');
+			}
+			if(index == 6){
+				$('.section6').find('.logo').delay(500).animate({
+					bottom: '0'
+				}, 1500, 'easeOutExpo');
+			}
+			if(index == 6){
+				$('.section6').find('.other').delay(500).animate({
+					left: '0'
+				}, 1500, 'easeOutExpo');
+			}
+			if(index == 6){
+				$('.section6').find('.other2').delay(500).animate({
+					right: '3%'
+				}, 1500, 'easeOutExpo');
+			}
+		},
+		onLeave: function(index, direction){
+			if(index == '2'){
+				$('.section2').find('p').delay(500).animate({
+					left: '-120%'
+				}, 1500, 'easeOutExpo');
+			}
+			if(index == '3'){
+				$('.section3').find('p').delay(500).animate({
+					bottom: '-120%'
+				}, 1500, 'easeOutExpo');
+			}
+			if(index == '4'){
+				$('.section4').find('p').fadeOut(2000);
+			}
+			if(index == '5'){
+				$('.section5').find('p').fadeOut(2000);
+			}
+			if(index == '6'){
+				$('.section6').find('p').delay(500).animate({
+					bottom: '-120%'
+				}, 1500, 'easeOutExpo');
+			}
+			if(index == '6'){
+				$('.section6').find('.logo').delay(500).animate({
+					bottom: '-120%'
+				}, 1500, 'easeOutExpo');
+			}
+			if(index == '6'){
+				$('.section6').find('.other').delay(500).animate({
+					left: '-120%'
+				}, 1500, 'easeOutExpo');
+			}
+			if(index == '6'){
+				$('.section6').find('.other2').delay(500).animate({
+					right: '-120%'
+				}, 1500, 'easeOutExpo');
+			}
+		}
+	});
+});
 </script>
+</head>
+
+<body>
+<div class="section section1">
+	<h3>来到这个世界</h3>
+	<p>或许她并不美好</p>
+</div>
+<div class="section section2">
+	<h3>抗争、呼喊</h3>
+	<p>或者哭泣</p>
+</div>
+<div class="section section3">
+	<h3>孤身一人</h3>
+	<p>或者独享清闲</p>
+</div>
+<div class="section section4">
+	<h3>改变不了世界</h3>
+	<p>却想着让这个世界变好一点</p>
+</div>
+<div class="section section5">
+	<h3>热爱生活，你我共勉</h3>
+	<p>Wish we could do More</p>
+</div>
+<div class="section section6">
+	
+	<div class="logo"><img src="images/144.png"></div>
+	<h3>这是我的个人博客</h3>
+		<p>欢迎访问</p>
+		<div class="other">
+		<ul class="list">
+			<li class="1st"><a href="/"><img src="images/home.png"></a></li>
+			<li class="1st"><a href="http://weibo.com/jasondyq" target="_blank" rel="external"><img src="images/weibo.png"></a></li>
+
+		</ul>
+	</div>
+	<div class="other2">
+		<ul class="list">
+			<li class="2nd"><a href="http://twitter.com/jasondyq" target="_blank" rel="external"><img src="images/twitter.png"></a></li>
+			<li class="2nd"><a class="git" href="http://github.com/jas0ndyq" target="_blank" rel="external"><img src="images/git.png"></a></li>
+		</ul>
+	</div>
+
+
+</div>
+
+
 </body>
 </html>
-
       
     </div>
     <footer class="article-footer">
