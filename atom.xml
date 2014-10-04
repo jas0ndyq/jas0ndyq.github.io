@@ -4,7 +4,7 @@
   <subtitle><![CDATA[This is for everyone]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://jas0n.me/"/>
-  <updated>2014-10-04T09:16:46.180Z</updated>
+  <updated>2014-10-04T09:17:36.079Z</updated>
   <id>http://jas0n.me/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://jas0n.me/2014/10/04/up_14_10_4/"/>
     <id>http://jas0n.me/2014/10/04/up_14_10_4/</id>
     <published>2014-10-04T06:18:58.000Z</published>
-    <updated>2014-10-04T09:16:41.000Z</updated>
+    <updated>2014-10-04T09:17:29.000Z</updated>
     <content type="html"><![CDATA[<blockquote>
 <p><strong>生活总是为一些突然的小点子所美好</strong><br><em>——我说的</em> ^_^</p>
 </blockquote>
@@ -34,7 +34,7 @@
 <p>RSS，聚合阅读，一般的地址是一个XML格式的页面，涵盖了标题、图片、内容等形式。RSS一直是一种方便和个性化的的工具，推荐大家使用这个工具来个性化自己的阅读内容。</p>
 <p>制作RSS地址，我们使用<a href="http://feed43.com/" target="_blank" rel="external">Feed43</a>和<a href="http://feedex.net/" target="_blank" rel="external">FeedEx</a>。<br><strong>1，制作一个初步的地址</strong><br>打开<a href="http://feed43.com/" target="_blank" rel="external">Feed43</a>，注册一个账户，激活后点击Creat your own feed<br><img src="http://img03.taobaocdn.com/imgextra/i3/665732193/TB2XjeFaFXXXXbLXpXXXXXXXXXX_!!665732193.png" alt=""></p>
 <p>step1：如图所示，输入你要创建RSS的站点地址<br><img src="http://img03.taobaocdn.com/imgextra/i3/665732193/TB2mJWMaFXXXXXCXpXXXXXXXXXX_!!665732193.png" alt=""><br>点击reload/load会加载该站点的HTML代码</p>
-<p>step2：分分析代码并添加搜索规则<br>加载完成后，在看见的HTML代码中<br><img src="http://img02.taobaocdn.com/imgextra/i2/665732193/TB2lOSVaFXXXXXoXXXXXXXXXXXX_!!665732193.png" alt=""><br>我们发现，主要内容的格式为div-a-img-aside-span这样，我们只需要把其中的动态内容用%、其他内容用 “<em>“ 这样的通配符进行匹配就可以完成建立地址的搜索规则。<br><img src="http://img01.taobaocdn.com/imgextra/i1/665732193/TB28BuDaFXXXXbDXpXXXXXXXXXX_!!665732193.png" alt=""><br>所以，我的这个RSS搜索规则如上所示，复制粘贴一断div代码，然后在链接处，时间、标题处修改为”%”符号，在句末换行处添加”</em>“通配符。点击Extract即可显示出来匹配的内容<br><img src="http://img01.taobaocdn.com/imgextra/i1/665732193/TB2CpuKaFXXXXbnXpXXXXXXXXXX_!!665732193.png" alt=""></p>
+<p>step2：分分析代码并添加搜索规则<br>加载完成后，在看见的HTML代码中<br><img src="http://img02.taobaocdn.com/imgextra/i2/665732193/TB2lOSVaFXXXXXoXXXXXXXXXXXX_!!665732193.png" alt=""><br>我们发现，主要内容的格式为div-a-img-aside-span这样，我们只需要把其中的动态内容用%、其他内容用 “<em>*” 这样的通配符进行匹配就可以完成建立地址的搜索规则。<br><img src="http://img01.taobaocdn.com/imgextra/i1/665732193/TB28BuDaFXXXXbDXpXXXXXXXXXX_!!665732193.png" alt=""><br>所以，我的这个RSS搜索规则如上所示，复制粘贴一断div代码，然后在链接处，时间、标题处修改为”%”符号，在句末换行处添加”</em>“通配符。点击Extract即可显示出来匹配的内容<br><img src="http://img01.taobaocdn.com/imgextra/i1/665732193/TB2CpuKaFXXXXbnXpXXXXXXXXXX_!!665732193.png" alt=""></p>
 <p>step3：RSS地址订阅显示规则<br>我们可以自定义该地址的标题、链接、内容的显示规则<br><img src="http://img04.taobaocdn.com/imgextra/i4/665732193/TB2TuaVaFXXXXXlXXXXXXXXXXXX_!!665732193.png" alt=""><br>我们把匹配出来的%1-%4进行分析，将标题、链接、内容对应填进去<br><img src="http://img02.taobaocdn.com/imgextra/i2/665732193/TB28zCHaFXXXXbnXpXXXXXXXXXX_!!665732193.png" alt=""><br>点击Preview即可查看该RSS地址的效果<br><img src="http://img04.taobaocdn.com/imgextra/i4/665732193/TB2.NuNaFXXXXcQXXXXXXXXXXXX_!!665732193.png" alt=""></p>
 <p>step4：自定义链接地址<br>由于Feed43提供自定义子目录名称，所以，我们可以自己修改RSS地址<br><img src="http://img03.taobaocdn.com/imgextra/i3/665732193/TB2pvuRaFXXXXarXXXXXXXXXXXX_!!665732193.png" alt=""><br>我的这个地址就为<a href="http://feed43.com/zhihustory.xml" target="_blank" rel="external">http://feed43.com/zhihustory.xml</a></p>
 <p><strong>2，制作全文输出RSS地址</strong><br>由于功能上的限制，Feed43并不支持全文输出（或者是我没有发现），所以我们得使用另外的工具进行输出，这里，我选择的是<a href="http://feedex.net/" target="_blank" rel="external">FeedEx</a>。<br>点击进入feedex，输入刚刚我们建立好的RSS网址<a href="http://feed43.com/zhihustory.xml" target="_blank" rel="external">http://feed43.com/zhihustory.xml</a><br><img src="http://img02.taobaocdn.com/imgextra/i2/665732193/TB29BeDaFXXXXcOXpXXXXXXXXXX_!!665732193.png" alt=""><br>点击Go!即可生成一个强制全文输出的RSS地址。<br>虽然这个地址有点长，但是可用的。<br><br></p>
