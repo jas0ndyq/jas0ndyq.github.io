@@ -186,7 +186,7 @@
 <h1 id="00，准备工作">00，准备工作</h1>
 <p>1,可用的深夜食堂HTML<a href="http://youzhihu.com/section/1" target="_blank" rel="external">地址</a><br>2,一个生成RSS链接的工具，<a href="http://feed43.com/" target="_blank" rel="external">Feed43</a><br>3,一个能够强制生成全文的RSS工具，<a href="http://feedex.net/" target="_blank" rel="external">FeedEx</a><br>4,IFTTT账户，<a href="https://ifttt.com/" target="_blank" rel="external">IFTTT</a><br>5,Pocket账户，<a href="http://getpocket.com/" target="_blank" rel="external">Pocket</a><br>6,基础HTML/CSS知识（小白无影响，可以自动忽略）<br><br></p>
 <h1 id="01，找到地址">01，找到地址</h1>
-<p>我们打开知乎日报客户端，找到深夜食堂，发现，这货的地址是这种滴：<a href="http://www.zhihu.com/story/6546544。" target="_blank" rel="external">http://www.zhihu.com/story/6546544。</a><br>可以看出，“深夜食堂”这个内容是保存在story这个目录下的，但是我们点开<br><a href="http://www.zhihu.com/story" target="_blank" rel="external">http://www.zhihu.com/story</a><br>却会报错，也就是该目录是不允许访问的。那么这就需要第三方网站的支持了。</p>
+<p>我们打开知乎日报客户端，找到深夜食堂，发现，卧槽，这货的地址是这种滴：<a href="http://www.zhihu.com/story/6546544。" target="_blank" rel="external">http://www.zhihu.com/story/6546544。</a><br>可以看出，“深夜食堂”这个内容是保存在story这个目录下的，但是我们点开<br><a href="http://www.zhihu.com/story" target="_blank" rel="external">http://www.zhihu.com/story</a><br>却会报错，也就是该目录是不允许访问的。那么这就需要第三方网站的支持了。</p>
 <p>其实做知乎日报web版的有几个，这里，我选择的是一个V2EX上给我提供帮助的一个大哥/大姐写的网站——<a href="http://youzhihu.com/" target="_blank" rel="external">爱知乎</a>。这个网站分类内容中提供的“深夜食堂”的入口，访问<a href="http://youzhihu.com/section/1" target="_blank" rel="external">http://youzhihu.com/section/1</a> ，即可进入网页版“知乎日报-深夜食堂”。这里不研究该网站的实现方法，有兴趣请查看开源代码：<a href="https://github.com/nihgwu/iZhihu" target="_blank" rel="external">https://github.com/nihgwu/iZhihu</a> 。<br><br></p>
 <h1 id="02，制作RSS地址">02，制作RSS地址</h1>
 <p>RSS，聚合阅读，一般的地址是一个XML格式的页面，涵盖了标题、图片、内容等形式。RSS一直是一种方便和个性化的的工具，推荐大家使用这个工具来个性化自己的阅读内容。</p>
@@ -207,7 +207,7 @@
 <p>最后回到主页面，我们看到的应该是这样。<br><img src="http://img04.taobaocdn.com/imgextra/i4/665732193/TB25M1IaFXXXXaDXpXXXXXXXXXX_!!665732193.png" alt=""><br>如果更新了，你会获得推送，就像这样滴<br><img src="http://img01.taobaocdn.com/imgextra/i1/665732193/TB25LyQaFXXXXbGXXXXXXXXXXXX_!!665732193.png" alt=""><br>然后就等着今晚的深夜食堂更新吧。。。LOL<br><br></p>
 <h1 id="04，后续">04，后续</h1>
 <p><strong>关于IFTTT</strong><br>IFTTT这个工具是很强大的，每个人都有不同的玩法，你也可以去看看自己的玩法，像我，就用来推送薇薇的私人博客更新~及时了解她的想法~~~嘿嘿。不过，由于在墙内，有许多整合墙外社交媒体的功能不能使用，同时IFTTT的推送有也可能延迟几分钟到十几分钟不等（也可能是iOS系统后台刷新时间的限制）。</p>
-<p><strong>关于这个RSS订阅的方法</strong><br>其实在学爬虫的时候，我就很想自己写一个小程序来实现这个功能，也写了一个非常简单的抓取每日知乎日报热点内容的Python<a href="https://github.com/jas0ndyq/Zhihu_Daily" target="_blank" rel="external">小程序</a>，但是最终我还是发现使用别现成的HTML站点能够让事情更简单（好吧，是我嫌太麻烦）。后面更深入的学习Python的时候会尝试在自己的博客上架设一个“深夜食堂”的页面出来。</p>
+<p><strong>关于这个RSS订阅的方法</strong><br>其实在学爬虫的时候，我就很想自己写一个小程序来实现这个功能，也写了一个非常简单的抓取每日知乎日报热点内容的Python<a href="https://github.com/jas0ndyq/Zhihu_Daily" target="_blank" rel="external">小程序</a>，但是最终我还是发现使用别现成的HTML站点能够让事情更简单（好吧，是我嫌太麻烦）。后面会尝试在自己的博客上架设一个“深夜食堂”的页面出来。</p>
 <p><strong>关于知乎</strong><br>知乎最近确实水了，不过就像我以前文章里说的，只有自己不断地增加自己的知识储备，才能认清别人是在忽悠，是在装逼还是在认真地回答问题。要回答一个问题是有成本的，要看一个答案怎么样也是有成本的。</p>
 <p><strong>关于“知乎日报-深夜食堂”</strong><br>这个栏目我觉得好，是因为我喜欢听别人讲故事。我相信大多数的故事是真的，我相信美好也相信黑暗。<br><br></p>
 <h1 id="05，参考资料">05，参考资料</h1>
