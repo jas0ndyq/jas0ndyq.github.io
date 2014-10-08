@@ -186,10 +186,11 @@ a {
 }
 #container #mobile-nav {
   display: none;
+  background: #fff6f6;
 }
 #container #mobile-nav #header {
   padding: 10px 0 0 0;
-  background: url("images/back1.jpg") no-repeat center;
+  background: url("http://img01.taobaocdn.com/imgextra/i1/665732193/TB2pn_oaFXXXXcbXpXXXXXXXXXX_!!665732193.jpg") no-repeat center;
 }
 #container #mobile-nav #header .profilepic {
   position: relative;
@@ -226,7 +227,7 @@ a {
   opacity: 0.8;
 }
 #container .left-col {
-  background-image: url("images/back1.jpg");
+  background-image: url("http://img01.taobaocdn.com/imgextra/i1/665732193/TB2pn_oaFXXXXcbXpXXXXXXXXXX_!!665732193.jpg");
   background-repeat: no-repeat;
   background-position: center;
   width: 30%;
@@ -457,15 +458,16 @@ a {
   margin-top: 15px;
   margin-bottom: 15px;
   text-align: center;
+  text-color: #fff;
   font-size: 20px;
   color: #fff;
-  opacity: 0.8;
+  opacity: 1;
 }
 #header .header-menu li a {
   display: block;
 }
 #header .header-menu li a:hover {
-  opacity: 1;
+  opacity: 0.7;
 }
 #header .header-nav {
   margin-top: 20%;
