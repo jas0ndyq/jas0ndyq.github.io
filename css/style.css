@@ -304,6 +304,7 @@ a {
     top: 60px;
     text-align: left;
     height: 30px;
+    margin-bottom: 5px;
   }
   #container .article .article-meta .article-date {
     font-size: 12px;
