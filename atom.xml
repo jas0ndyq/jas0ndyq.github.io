@@ -4,7 +4,7 @@
   <subtitle><![CDATA[This is for everyone]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://jas0n.me/"/>
-  <updated>2014-11-18T09:26:47.975Z</updated>
+  <updated>2014-11-18T09:29:07.270Z</updated>
   <id>http://jas0n.me/</id>
   
   <author>
@@ -19,8 +19,8 @@
     <link href="http://jas0n.me/2014/11/18/JS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/"/>
     <id>http://jas0n.me/2014/11/18/JS学习笔记1/</id>
     <published>2014-11-18T08:45:37.000Z</published>
-    <updated>2014-11-18T09:26:34.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="ECMAScript变量包含两种不同类型的值">ECMAScript变量包含两种不同类型的值</h2>
+    <updated>2014-11-18T09:29:01.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="ECMAScript变量包含两种不同类型的值">ECMAScript变量包含两种不同类型的值</h1>
 <ul>
 <li><p>基本类型值：<br>包含：<strong>数值</strong>、<strong>字符串</strong>、<strong>布尔值</strong>以及<strong>Null</strong>和<strong>Undefined</strong></p>
 </li>
@@ -30,7 +30,7 @@
 <a id="more"></a>
 
 <hr>
-<h2 id="对两种值的操作">对两种值的操作</h2>
+<h1 id="对两种值的操作">对两种值的操作</h1>
 <h3 id="复制变量值">复制变量值</h3>
 <p><strong>1，基本类型值</strong></p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> num1 = <span class="number">5</span>;</div><div class="line"><span class="keyword">var</span> num2 = num1</div></pre></td></tr></table></figure>
@@ -66,7 +66,7 @@
 <p>在函数<code>setName</code>中对参数<code>obj</code>的重写只能将其算作在修改<code>obj</code>这个变量的过程中引用的是一个<strong>局部变量</strong>，而这个局部变量最终<strong>不会影响</strong>到函数外部的代码。</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h2 id="ECMAScript变量包含两种不同类型的值">ECMAScript变量包含两种不同类型的值</h2>
+    <![CDATA[<h1 id="ECMAScript变量包含两种不同类型的值">ECMAScript变量包含两种不同类型的值</h1>
 <ul>
 <li><p>基本类型值：<br>包含：<strong>数值</strong>、<strong>字符串</strong>、<strong>布尔值</strong>以及<strong>Null</strong>和<strong>Undefined</strong></p>
 </li>
@@ -86,7 +86,7 @@
     <link href="http://jas0n.me/2014/11/12/up_14_11_12/"/>
     <id>http://jas0n.me/2014/11/12/up_14_11_12/</id>
     <published>2014-11-12T14:34:00.000Z</published>
-    <updated>2014-11-12T14:39:48.000Z</updated>
+    <updated>2014-11-18T09:28:59.000Z</updated>
     <content type="html"><![CDATA[<h2 id="背景">背景</h2>
 <p>“用Shadowsocks来实现iOS设备的全局代理”，这个想法出现了好久，也听说了越狱后可以实现此功能。但看着好多大神也只是模棱两可没有给出具体解法，我也就没怎么上心去搞这个。有趣的是这两天在玩Ubuntu，昨天上午发现Shadowsocks图形客户端在Linux下有些问题，遂看了看官方文档，弄好Linux的客户端后不经意间看到Shadowsocks的iOS客户端文档，发现这货的全局代理方式竟是如此简单，那些大神难道是因为觉得英语很复杂不给小白说这个功能了么，Orz。那么到底怎么搞，我们来分析下思路~</p>
 <a id="more"></a>
@@ -144,6 +144,8 @@
 <li><a href="https://github.com/shadowsocks/shadowsocks-iOS/wiki/Help" target="_blank" rel="external">Shadowsocks for iOS支持文档</a></li>
 <li><a href="https://github.com/clowwindy/shadowsocks/wiki/Shadowsocks-%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E" target="_blank" rel="external">Shadowsocks 项目地址</a></li>
 <li><a href="http://zh.wikipedia.org/zh-cn/Shadowsocks" target="_blank" rel="external">维基百科-Shadowsocks</a></li>
+<li>178源-apt.178.com</li>
+<li>威锋精品源- repo.feng.com</li>
 </ul>
 <hr>
 <p><strong>愿这个世界更美好</strong></p>
