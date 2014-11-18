@@ -169,7 +169,7 @@
 
 <hr>
 <h2 id="对两种值的操作">对两种值的操作</h2>
-<h4 id="复制变量值">复制变量值</h4>
+<h3 id="复制变量值">复制变量值</h3>
 <p><strong>1，基本类型值</strong></p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> num1 = <span class="number">5</span>;</div><div class="line"><span class="keyword">var</span> num2 = num1</div></pre></td></tr></table></figure>
 
@@ -183,7 +183,7 @@
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var <span class="variable">obj1 =</span> new Object();</div><div class="line">var <span class="variable">obj2 =</span> obj1;</div><div class="line">obj1.<span class="variable">name =</span> <span class="string">"Jason"</span>;</div><div class="line">alert(obj2.name);     //返回<span class="string">"Jason"</span></div><div class="line">obj1.<span class="variable">name =</span> <span class="string">"Vivian"</span>;</div><div class="line">alert(obj2.name);    //返回<span class="string">"Vivian"</span></div><div class="line">obj2.<span class="variable">name =</span> <span class="string">"Qiu"</span>;</div><div class="line">alert(obj1.name);    //返回<span class="string">"Qiu"</span></div></pre></td></tr></table></figure>
 
 <hr>
-<h4 id="传递参数">传递参数</h4>
+<h3 id="传递参数">传递参数</h3>
 <p>ECMAScript中，所有函数的参数都是<strong>按值传递</strong>，而<strong>不是按引用传递</strong>。</p>
 <p><strong>1，基本类型值</strong><br>在传递基本类型值时，被传递的值会被直接复制给一个局部变量。<br>例如：</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">function addOne(num) {</div><div class="line">    num += <span class="number">1</span>;</div><div class="line">    <span class="keyword">return</span> num;</div><div class="line">}</div><div class="line"><span class="keyword">var</span> count = <span class="number">10</span>;</div><div class="line"><span class="keyword">var</span> <span class="literal">result</span> = addOne(count);</div><div class="line">alert(count);    //返回<span class="string">"10"</span></div><div class="line">alert(<span class="literal">result</span>);    //返回<span class="string">"11"</span></div></pre></td></tr></table></figure>
