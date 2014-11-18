@@ -4,7 +4,7 @@
   <subtitle><![CDATA[This is for everyone]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://jas0n.me/"/>
-  <updated>2014-11-18T08:58:05.060Z</updated>
+  <updated>2014-11-18T09:00:31.474Z</updated>
   <id>http://jas0n.me/</id>
   
   <author>
@@ -16,8 +16,8 @@
   
   <entry>
     <title><![CDATA[JS学习笔记(1)——变量的两种值]]></title>
-    <link href="http://jas0n.me/2014/11/18/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    <id>http://jas0n.me/2014/11/18/学习笔记/</id>
+    <link href="http://jas0n.me/2014/11/18/JS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/"/>
+    <id>http://jas0n.me/2014/11/18/JS学习笔记1/</id>
     <published>2014-11-18T08:45:37.000Z</published>
     <updated>2014-11-18T08:58:00.000Z</updated>
     <content type="html"><![CDATA[<h2 id="ECMAScript变量包含两种不同类型的值">ECMAScript变量包含两种不同类型的值</h2>
@@ -75,83 +75,6 @@
 </ul>
 ]]>
     
-    </summary>
-    
-      <category term="技术" scheme="http://jas0n.me/tags/%E6%8A%80%E6%9C%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[JS学习笔记(1)——变量的两种值]]></title>
-    <link href="http://jas0n.me/2014/11/18/JS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/"/>
-    <id>http://jas0n.me/2014/11/18/JS学习笔记1/</id>
-    <published>2014-11-18T08:45:37.000Z</published>
-    <updated>2014-11-18T08:46:41.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="ECMAScript变量包含两种不同类型的值">ECMAScript变量包含两种不同类型的值</h2>
-<ul>
-<li><p>基本类型值：<br>包含：<strong>数值</strong>、<strong>字符串</strong>、<strong>布尔值</strong>以及<strong>Null</strong>和<strong>Undefined</strong></p>
-</li>
-<li><p>引用类型值：<br>保存于内存中的<strong>对象</strong></p>
-</li>
-</ul>
-<hr>
-<h2 id="对两种值的操作">对两种值的操作</h2>
-<h4 id="复制变量值">复制变量值</h4>
-<p><strong>1，基本类型值</strong></p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> num1 = <span class="number">5</span>;</div><div class="line"><span class="keyword">var</span> num2 = num1</div></pre></td></tr></table></figure>
-
-<p>其中使用变量</p>
-<figure class="highlight num1```来初始化变量```num2```，故变量```num2```也会在内存保存值```5```，但这里保存的```num2```的```5```与```num1```的```5```是独立的，任何操作都不会相互影响。"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">例如：</div></pre></td></tr></table></figure>
-
-<pre><code><span class="keyword">var</span> num1 = <span class="number">5</span>;
-<span class="keyword">var</span> num2 = num1;
-num1 = <span class="number">10</span>;
-alert(num1);    <span class="comment">//返回10</span>
-alert(num2);    <span class="comment">//返回5</span>
-</code></pre><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">*</span><span class="keyword">*</span>2，引用类型值<span class="keyword">*</span><span class="keyword">*</span></div></pre></td></tr></table></figure>
-
-<p>var obj1 = new Object();<br>var obj2 = obj1;<br>obj1.name = “Jason”;<br>alert(obj2.name);    //返回”Jason”</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">其中，用一个新的对象为变量</div></pre></td></tr></table></figure>
-
-<p>obj1</p>
-<figure class="highlight 赋值，同时用变量```obj1```来为变量```obj2```进行初始化。这里**并不是**将变量```obj1```的副本保存在变量```obj2```中，而是提供一个指针指向变量```obj1```的内存。故，操作结束后，**两个变量引用的是不独立的也即是同一个对象**，所以操作一个变量，另一个变量也会改变。"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">例如：</div></pre></td></tr></table></figure>
-
-<p>var obj1 = new Object();<br>var obj2 = obj1;<br>obj1.name = “Jason”;<br>alert(obj2.name);     //返回”Jason”<br>obj1.name = “Vivian”;<br>alert(obj2.name);    //返回”Vivian”<br>obj2.name = “Qiu”;<br>alert(obj1.name);    //返回”Qiu”</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">---</div><div class="line"></div><div class="line"><span class="comment">####传递参数</span></div><div class="line">ECMAScript中，所有函数的参数都是<span class="keyword">*</span><span class="keyword">*</span>按值传递<span class="keyword">*</span><span class="keyword">*</span>，而<span class="keyword">*</span><span class="keyword">*</span>不是按引用传递<span class="keyword">*</span><span class="keyword">*</span>。</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">*</span><span class="keyword">*</span>1，基本类型值<span class="keyword">*</span><span class="keyword">*</span></div><div class="line">在传递基本类型值时，被传递的值会被直接复制给一个局部变量。</div><div class="line">例如：</div></pre></td></tr></table></figure>
-
-<p>function addOne(num) {<br>    num += 1;<br>    return num;<br>}<br>var count = 10;<br>var result = addOne(count);<br>alert(count);    //返回”10”<br>alert(result);    //返回”11”</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">可见，其中定义变量</div></pre></td></tr></table></figure>
-
-<p>count</p>
-<figure class="highlight 为数值```10```，同时变量```count```作为参数传递给函数```addOne()```，这样实际上是将数值```10```复制给了参数```num```，故参数```num```被加上```1```，而变量```count```的值不会随之改变。"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">*</span><span class="keyword">*</span>如果是按照引用传递值参数的话，变量</div></pre></td></tr></table></figure>
-
-<p>count</p>
-<figure class="highlight 的值也将变为```11```**"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">*</span><span class="keyword">*</span>2，引用类型值<span class="keyword">*</span><span class="keyword">*</span></div><div class="line">传递引用类型的值也即是将该值的<span class="keyword">*</span><span class="keyword">*</span>内存地址<span class="keyword">*</span><span class="keyword">*</span>复制给一个局部变量，因此这个局部变量的变化也会体现在外部（这是引用类型值得特性决定的，<span class="keyword">*</span><span class="keyword">*</span>不能<span class="keyword">*</span><span class="keyword">*</span>以此说明引用类型值是按引用传递的）</div><div class="line">例如：</div></pre></td></tr></table></figure>
-
-<p>function setName(obj) {<br>    obj.name = “Jason”；<br>    obj = new Object();<br>    obj.name = “Vivian”;<br>}<br>var person = new Object();<br>setName(person);<br>alert(person.name);    //返回”Jason”</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">可见，其中创建新对象并保存在变量</div></pre></td></tr></table></figure>
-
-<p>person</p>
-<figure class="highlight 中，而这个变量被的内存地址被复制到了函数```setName```中。在```setName```函数中，此时```obj```和```person```引用的是同一个对象（即，即使这个变量是按值传递obj也会按引用的规则来访问同一对象），```person```的内存在内存堆中只有一个，所以，外部的```person```也会反应内部修改。"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">*</span><span class="keyword">*</span>但，为什么说这样就表示对象时按值传递的呢<span class="keyword">*</span><span class="keyword">*</span>，我也是卡在了这里。后来仔细观察代码发现：</div><div class="line">我们实际上在<span class="keyword">*</span><span class="keyword">*</span>函数内部是修改了</div></pre></td></tr></table></figure>
-
-<p>obj</p>
-<figure class="highlight 的参数值**也即是："><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">`<span class="javascript"></span>``<span class="javascript"></span></div><div class="line">    obj = <span class="keyword">new</span> <span class="built_in">Object</span>();</div><div class="line">    obj.name = <span class="string">"Vivian"</span>;</div></pre></td></tr></table></figure>
-
-<p>而我们发现，最后的</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">alert</span><span class="params">(person.name)</span></span></div></pre></td></tr></table></figure>
-
-<p>不是返回的</p>
-<figure class="highlight Vivian```，而还是以前的```Jason```，这就说明了，引用类型值得参数传递并不是按引用传递，也就证明了在ECMAScript中，所有函数的参数传递方式都是按值传递的。"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">回到这段代码中：</div></pre></td></tr></table></figure>
-
-<p>function setName(obj) {<br>    obj.name = “Jason”；<br>    obj = new Object();    //此处引用的应该属于局部变量<br>    obj.name = “Vivian”;<br>}<br>var person = new Object();<br>setName(person);<br>alert(person.name); </p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">在函数</div></pre></td></tr></table></figure>
-
-<p>setName<code>中对参数</code>obj<code>的重写只能将其算作在修改</code>obj```这个变量的过程中引用的是一个<strong>局部变量</strong>，而这个局部变量最终<strong>不会影响</strong>到函数外部的代码。</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h2 id="ECMAScript变量包含两种不同类型的值">ECMAScript变量包含两种不同类型的值</h2>
-<ul>
-<li><p>基本类型值：<br>包含：<strong>数值</strong>、<strong>字符串</strong>、<strong>布尔值</s]]>
     </summary>
     
       <category term="技术" scheme="http://jas0n.me/tags/%E6%8A%80%E6%9C%AF/"/>

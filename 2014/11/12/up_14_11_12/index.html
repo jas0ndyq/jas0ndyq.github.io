@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="apple-touch-icon" href="http://img03.taobaocdn.com/imgextra/i3/665732193/TB2WWWwapXXXXaDXpXXXXXXXXXX_!!665732193.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="http://img03.taobaocdn.com/imgextra/i3/665732193/TB2WWWwapXXXXaDXpXXXXXXXXXX_!!665732193.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="http://img03.taobaocdn.com/imgextra/i3/665732193/TB2PSuCapXXXXXqXXXXXXXXXXXX_!!665732193.png" /> 
+  
+<script type="text/javascript">
+	var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+	document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fb9ab8c85f88622eb244623bc2a0c81cf' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+  <meta charset="utf-8">
+  
+  <title>使用“影梭”，为你的iOS设备实现全局代理 | Jas0ndyq</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="背景
+“用Shadowsocks来实现iOS设备的全局代理”，这个想法出现了好久，也听说了越狱后可以实现此功能。但看着好多大神也只是模棱两可没有给出具体解法，我也就没怎么上心去搞这个。有趣的是这两天在玩Ubuntu，昨天上午发现Shadowsocks图形客户端在Linux下有些问题，遂看了看官方文档，弄好Linux的客户端后不经意间看到Shadowsocks的iOS客户端文档，发现这货的全局代理方">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用“影梭”，为你的iOS设备实现全局代理">
+<meta property="og:url" content="http://jas0n.me/2014/11/12/up_14_11_12/">
+<meta property="og:site_name" content="Jas0ndyq">
+<meta property="og:description" content="背景
+“用Shadowsocks来实现iOS设备的全局代理”，这个想法出现了好久，也听说了越狱后可以实现此功能。但看着好多大神也只是模棱两可没有给出具体解法，我也就没怎么上心去搞这个。有趣的是这两天在玩Ubuntu，昨天上午发现Shadowsocks图形客户端在Linux下有些问题，遂看了看官方文档，弄好Linux的客户端后不经意间看到Shadowsocks的iOS客户端文档，发现这货的全局代理方">
+<meta property="og:image" content="http://img04.taobaocdn.com/imgextra/i4/665732193/TB2dzpAbXXXXXX3XXXXXXXXXXXX_!!665732193.png">
+<meta property="og:image" content="http://img03.taobaocdn.com/imgextra/i3/665732193/TB2cFJAbXXXXXanXXXXXXXXXXXX_!!665732193.png">
+<meta property="og:image" content="http://img02.taobaocdn.com/imgextra/i2/665732193/TB2Oe8zbXXXXXaTXXXXXXXXXXXX_!!665732193.png">
+<meta property="og:image" content="http://img02.taobaocdn.com/imgextra/i2/665732193/TB2AoZHXpXXXXbPXpXXXXXXXXXX_!!665732193.png">
+<meta property="og:image" content="http://img03.taobaocdn.com/imgextra/i3/665732193/TB2ZUgqXVXXXXcLXpXXXXXXXXXX_!!665732193.png">
+<meta property="og:image" content="http://img02.taobaocdn.com/imgextra/i2/665732193/TB2Ik0AbXXXXXadXXXXXXXXXXXX_!!665732193.png">
+<meta property="og:image" content="http://img02.taobaocdn.com/imgextra/i2/665732193/TB277VqbXXXXXaPXpXXXXXXXXXX_!!665732193.png">
+<meta property="og:image" content="http://img04.taobaocdn.com/imgextra/i4/665732193/TB2r4XzbXXXXXa2XXXXXXXXXXXX_!!665732193.png">
+<meta property="og:image" content="http://img02.taobaocdn.com/imgextra/i2/665732193/TB2gslxbXXXXXcsXXXXXXXXXXXX_!!665732193.png">
+<meta property="og:image" content="http://img02.taobaocdn.com/imgextra/i2/665732193/TB2TxSeXpXXXXXNXFXXXXXXXXXX_!!665732193.png">
+<meta property="og:image" content="http://img04.taobaocdn.com/imgextra/i4/665732193/TB2O_drbXXXXXaAXpXXXXXXXXXX_!!665732193.png">
+<meta property="og:image" content="http://img03.taobaocdn.com/imgextra/i3/665732193/TB2gb0ubXXXXXc0XXXXXXXXXXXX_!!665732193.png">
+<meta property="og:image" content="http://img01.taobaocdn.com/imgextra/i1/665732193/TB2YcxybXXXXXbOXXXXXXXXXXXX_!!665732193.png">
+<meta property="og:image" content="http://img03.taobaocdn.com/imgextra/i3/665732193/TB2L9BAbXXXXXafXXXXXXXXXXXX_!!665732193.png">
+<meta property="og:image" content="http://img03.taobaocdn.com/imgextra/i3/665732193/TB2JdxtbXXXXXX1XpXXXXXXXXXX_!!665732193.png">
+<meta property="og:image" content="http://img04.taobaocdn.com/imgextra/i4/665732193/TB29d8CbXXXXXcIXXXXXXXXXXXX_!!665732193.png">
+<meta property="og:image" content="http://img04.taobaocdn.com/imgextra/i4/665732193/TB2K1lCbXXXXXbMXXXXXXXXXXXX_!!665732193.png">
+<meta property="og:image" content="http://img02.taobaocdn.com/imgextra/i2/665732193/TB2Xr8wbXXXXXXhXpXXXXXXXXXX_!!665732193.png">
+<meta property="og:image" content="http://img04.taobaocdn.com/imgextra/i4/665732193/TB2HgBubXXXXXXrXpXXXXXXXXXX_!!665732193.png">
+<meta property="og:image" content="http://img01.taobaocdn.com/imgextra/i1/665732193/TB2puFCbXXXXXbeXpXXXXXXXXXX_!!665732193.png">
+<meta property="og:image" content="http://img04.taobaocdn.com/imgextra/i4/665732193/TB22tBBbXXXXXX1XXXXXXXXXXXX_!!665732193.png">
+<meta property="og:image" content="http://img01.taobaocdn.com/imgextra/i1/665732193/TB22T8sbXXXXXXBXpXXXXXXXXXX_!!665732193.png">
+<meta property="og:image" content="http://img01.taobaocdn.com/imgextra/i1/665732193/TB25K0ubXXXXXc2XXXXXXXXXXXX_!!665732193.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="使用“影梭”，为你的iOS设备实现全局代理">
+<meta name="twitter:description" content="背景
+“用Shadowsocks来实现iOS设备的全局代理”，这个想法出现了好久，也听说了越狱后可以实现此功能。但看着好多大神也只是模棱两可没有给出具体解法，我也就没怎么上心去搞这个。有趣的是这两天在玩Ubuntu，昨天上午发现Shadowsocks图形客户端在Linux下有些问题，遂看了看官方文档，弄好Linux的客户端后不经意间看到Shadowsocks的iOS客户端文档，发现这货的全局代理方">
+
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+  <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<div class="profilepic">
+			<img src="http://img04.taobaocdn.com/imgextra/i4/665732193/TB2S.mlapXXXXaGXXXXXXXXXXXX_!!665732193.png">
+		</div>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Jas0ndyq</a></h1>
+		</hgroup>
+
+
+		
+		<p class="header-subtitle">This is for everyone</p>
+		
+
+		<div class="desc">
+		站在巨人的肩上
+		</div>
+		<nav class="header-menu">
+			<ul class="main">
+				<li><a href="/">博客</a></li>
+				<li><a href="/archives">文章</a></li>
+				<li><a href="/about/about.html">关于</a></li>
+				<li><a href="/other/index">其他</a></li>
+			</ul>
+
+
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/jas0ndyq" title="github">github</a>
+		        
+					<a class="weibo" target="_blank" href="http://weibo.com/jasondyq" title="weibo">weibo</a>
+		        
+					<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+		        
+			</div>
+		</nav>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img src="http://img04.taobaocdn.com/imgextra/i4/665732193/TB2S.mlapXXXXaGXXXXXXXXXXXX_!!665732193.png">
+			</div>
+
+			<hgroup>
+			  <h1 class="header-author"><a href="/">Jas0ndyq</a></h1>
+			</hgroup>
+			
+			<p class="header-subtitle">This is for everyone</p>
+			
+			<nav class="header-menu">
+				<ul class="first">
+					<li><a href="/">博客</a></li>
+					<li><a href="/archives">文章</a></li>
+					
+
+		        <div class="clearfix"></div>
+				</ul>
+				<ul class="second">
+					<li><a href="/about/about.html" target="_blank">关于</a></li>
+					<li><a href="/other/index">其他</a></li>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/jas0ndyq" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/jasondyq" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <article id="post-up_14_11_12" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2014/11/12/up_14_11_12/" class="article-date">
+  	<time datetime="2014-11-12T14:34:00.000Z" itemprop="datePublished">11月 12 2014</time>
+</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li></ul>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      使用“影梭”，为你的iOS设备实现全局代理
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="背景">背景</h2>
+<p>“用Shadowsocks来实现iOS设备的全局代理”，这个想法出现了好久，也听说了越狱后可以实现此功能。但看着好多大神也只是模棱两可没有给出具体解法，我也就没怎么上心去搞这个。有趣的是这两天在玩Ubuntu，昨天上午发现Shadowsocks图形客户端在Linux下有些问题，遂看了看官方文档，弄好Linux的客户端后不经意间看到Shadowsocks的iOS客户端文档，发现这货的全局代理方式竟是如此简单，那些大神难道是因为觉得英语很复杂不给小白说这个功能了么，Orz。那么到底怎么搞，我们来分析下思路~</p>
+<a id="more"></a>
+
+<p><strong>在这之前先介绍下Shadowsocks</strong></p>
+<p>咳咳，这货呢，叫Shadowsocks，中文名影梭（好吧~直译的），它是</p>
+<blockquote>
+<p>一个可穿透防火墙的轻量代理。</p>
+</blockquote>
+<p>也就是一个轻量级的翻墙工具。运行原理请参见<a href="http://zh.wikipedia.org/zh-cn/Shadowsocks" target="_blank" rel="external">维基百科相关页面</a>。<br>同时，它也是一个开源工具，关于“影梭”的一切你都可以在<a href="https://github.com/clowwindy/shadowsocks/wiki/Shadowsocks-%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E" target="_blank" rel="external">GitHub相关页面</a>找到。</p>
+<p><strong>实现iOS设备全局代理的思路</strong></p>
+<ul>
+<li>在iOS设备安装Shadowsocks app。</li>
+<li>为iOS设备设置全局代理。</li>
+<li>为Shadowsocks app设置后台常驻。</li>
+</ul>
+<p><em>说明</em></p>
+<p>1.Shadowsocks app作为一个在苹果应用商店上架的应用，它必须遵循苹果应用的相关规定，即后台不能常驻，也就是说在不越狱的情况下，它</p>
+<blockquote>
+<p>Only works for a few minutes. Due to iOS restrictions, Shadowsocks can’t keep running in the background. It’s killed after you leave it for a while. To keep it running for an extended period of time, you have to come back to the Shadowsocks app every few minutes.</p>
+</blockquote>
+<p>所以，我们进行完美体验的前提是你的iOS设备已经越狱。如果你的设备没有越狱，你只有在按照以下教程操作好了过后几分钟（大都在10分钟内）<br>再次打开Shadowsocks app。</p>
+<p>2.Shadowsocks作为一个代理服务，它一般需要在服务端进行配置，一般的用户并不拥有一个支持Shadowsocks的服务器。不过好在Shadowsocks的支持社区相当成熟，它们提供免费的服务来支持和推广Shadowsocks的服务。而我们将要使用的Shadowsocks app也会根据情况为你分配相关服务器。当然免费的服务器稳定性和速度肯定会差一点，但已经很够用了。如果你想配置你的私有服务器，请加入相关社区进行进一步学习。</p>
+<p>3.目前仅支持Wi-Fi下的全局代理服务。</p>
+<h1 id="00，准备工作">00，准备工作</h1>
+<ul>
+<li>iOS设备（未越狱，各个版本均可）</li>
+<li>iOS设备（越狱，我们使用的插件目前支持到iOS7）</li>
+<li>Shadowsocks iOS App <a href="https://itunes.apple.com/us/app/shadowsocks/id665729974?ls=1&amp;mt=8" target="_blank" rel="external">点我下载</a></li>
+<li>插件Background Manager</li>
+</ul>
+<h1 id="01，安装Shadowsocks_iOS_App，并在Wi-Fi选项中设置代理">01，安装Shadowsocks iOS App，并在Wi-Fi选项中设置代理</h1>
+<p>首先，我们打开App Store，搜索到Shadowsocks<br><img src="http://img04.taobaocdn.com/imgextra/i4/665732193/TB2dzpAbXXXXXX3XXXXXXXXXXXX_!!665732193.png" alt=""></p>
+<p>下载、安装后发现，出现了一个纸飞机的图标，就是它啦~<br><img src="http://img03.taobaocdn.com/imgextra/i3/665732193/TB2cFJAbXXXXXanXXXXXXXXXXXX_!!665732193.png" alt=""></p>
+<p>打开它，我们看到的应该是一个类似于浏览器的东西，而这也是这个Shadowsocks做这个app的主要功能。在这个浏览器里，你就能够实现代理了，但我们要做的是全局代理，所以我们继续。看到右边的选项按钮，打开之，可以看到一些选项，都可以打开看看。<br><img src="http://img02.taobaocdn.com/imgextra/i2/665732193/TB2Oe8zbXXXXXaTXXXXXXXXXXXX_!!665732193.png" alt=""><br>而这里，我们打开选项这一栏看看。发现，这正是我们要找的服务器配置所在地。而前面已经说了，我们可以直接使用Shadowsocks社区的代理服务，所以根本不需要我们的配置。<br><img src="http://img02.taobaocdn.com/imgextra/i2/665732193/TB2AoZHXpXXXXbPXpXXXXXXXXXX_!!665732193.png" alt=""><br>如果你有自己的服务器，你可以选择自行按如下方式配置。<br><img src="http://img03.taobaocdn.com/imgextra/i3/665732193/TB2ZUgqXVXXXXcLXpXXXXXXXXXX_!!665732193.png" alt=""><br>至此，我们已经完成了对app的配置。（好吧，根本没有配置好么~）<br>接下来，我们进行全局代理设置。我们打开设置—Wi-Fi一栏，点开右边那个感叹号设置按钮。<br><img src="http://img02.taobaocdn.com/imgextra/i2/665732193/TB2Ik0AbXXXXXadXXXXXXXXXXXX_!!665732193.png" alt=""><br>找到下面HTTP代理的设置项，将其设置为<strong>自动</strong>，并填写如下代理地址<br><code>http://127.0.0.1:8090/proxy.pac</code><br><img src="http://img02.taobaocdn.com/imgextra/i2/665732193/TB277VqbXXXXXaPXpXXXXXXXXXX_!!665732193.png" alt=""><br>然后点击上面Wi-Fi返回，这时候，会出现一两秒的配置时间，你所连接的WiFi会出现loading画面（也就是转菊花），完成后会自动连上Wi-Fi。<br>至此，我们已经设置好了全局代理的配置。想尝鲜的同学打开Safari或者Twitter、Facebook、YouTube的客户端就发现，卧槽，真特么可以。<br>在Safari下自然是可以的<br><img src="http://img04.taobaocdn.com/imgextra/i4/665732193/TB2r4XzbXXXXXa2XXXXXXXXXXXX_!!665732193.png" alt="Safari"><br>在各个客户端下表现也不错<br><img src="http://img02.taobaocdn.com/imgextra/i2/665732193/TB2gslxbXXXXXcsXXXXXXXXXXXX_!!665732193.png" alt="Twitter"><br><img src="http://img02.taobaocdn.com/imgextra/i2/665732193/TB2TxSeXpXXXXXNXFXXXXXXXXXX_!!665732193.png" alt="instagram"><br><img src="http://img04.taobaocdn.com/imgextra/i4/665732193/TB2O_drbXXXXXaAXpXXXXXXXXXX_!!665732193.png" alt="u2b"></p>
+<p><strong>目前，我们已经完成了配置，功能是可以使用的。</strong>但正如前文所说，由于iOS自身的限制和Shadowsocks app代理方式的限制，我们必须得让Shadowsocks app一直保持开启才可以实现全局代理。如果通常十分钟以后iOS就会自动退出后台的一些第三方应用，那么Shadowsocks app自然也会被退出。这就导致了我们需要过一会就去打开一次Shadowsocks app，平时刷刷推特还是可以接受，但强迫症肯定很不爽，所以我们就得使用一个插件来让这个app，在我使用我的设备期间一直保持运行。</p>
+<hr>
+<p><em>iOS8及未越狱设备请忽略以下内容</em></p>
+<h1 id="02，安装background_manager，并配置好后台运行规则。">02，安装background manager，并配置好后台运行规则。</h1>
+<p>安装插件的前提是我们的iOS设备必须越狱并运行完好。<br>首先，在Cydia里搜索background manager<br><img src="http://img03.taobaocdn.com/imgextra/i3/665732193/TB2gb0ubXXXXXc0XXXXXXXXXXXX_!!665732193.png" alt=""><br>正版的此插件需要6元进行购买，但目前对支付宝的支持还不是很好，我们选择在178源（后面给出地址）里进行安装（体验无罪，但请尽量支持正版）。<br><img src="http://img01.taobaocdn.com/imgextra/i1/665732193/TB2YcxybXXXXXbOXXXXXXXXXXXX_!!665732193.png" alt=""><br>你也可以一并选择威锋技术组出品的汉化补丁<br><img src="http://img03.taobaocdn.com/imgextra/i3/665732193/TB2L9BAbXXXXXafXXXXXXXXXXXX_!!665732193.png" alt=""><br>一并安装完成后，respring注销下即可进入主界面。<br>然后，我们在设置里找到相关项目-后台运行管理器<br><img src="http://img03.taobaocdn.com/imgextra/i3/665732193/TB2JdxtbXXXXXX1XpXXXXXXXXXX_!!665732193.png" alt=""><br>打开之~<br><img src="http://img04.taobaocdn.com/imgextra/i4/665732193/TB29d8CbXXXXXcIXXXXXXXXXXXX_!!665732193.png" alt=""><br>选择指定应用设置，并选择添加项目<br><img src="http://img04.taobaocdn.com/imgextra/i4/665732193/TB2K1lCbXXXXXbMXXXXXXXXXXXX_!!665732193.png" alt=""><br>添加Shadowsocks到该规则<br><img src="http://img02.taobaocdn.com/imgextra/i2/665732193/TB2Xr8wbXXXXXXhXpXXXXXXXXXX_!!665732193.png" alt=""><br>返回发现，该规则目录下已经出现Shadowsocks一则，并注明后台规则还是原生<br><img src="http://img04.taobaocdn.com/imgextra/i4/665732193/TB2HgBubXXXXXXrXpXXXXXXXXXX_!!665732193.png" alt=""><br>点击Shadowsocks，发现的确为原生的后台模式<br><img src="http://img01.taobaocdn.com/imgextra/i1/665732193/TB2puFCbXXXXXbeXpXXXXXXXXXX_!!665732193.png" alt=""><br>我们进行选择，选择“后台”一栏<br><img src="http://img04.taobaocdn.com/imgextra/i4/665732193/TB22tBBbXXXXXX1XXXXXXXXXXXX_!!665732193.png" alt=""><br>然后返回，发现，当前后台规则已经变为“后台”<br><img src="http://img01.taobaocdn.com/imgextra/i1/665732193/TB22T8sbXXXXXXBXpXXXXXXXXXX_!!665732193.png" alt=""><br>而至此，我们已经完成了使Shadowsocks app常驻后台的配置工作，你也可以对background manager插件继续进行相关样式的设置，请自行探索。<br><img src="http://img01.taobaocdn.com/imgextra/i1/665732193/TB25K0ubXXXXXc2XXXXXXXXXXXX_!!665732193.png" alt=""></p>
+<p>完成配置后，我们可以返回重新打开Shadowsocks app，然后就会发现，在我们使用Shadowsocks app进行全局代理时，只要不自行退出后台，我们的全局代理会一直进行下去，即使你进行了<strong>锁屏操作</strong>。当然，由后台管理插件完成的服务必然会存在<strong>不稳定</strong>因素，也可能会导致<strong>机身发热量增加</strong>，<strong>电池消耗过快</strong>等问题，这就仁者见仁智者见智了哈~</p>
+<h1 id="03，后续和致谢">03，后续和致谢</h1>
+<p><strong>关于app和插件的版权问题</strong>，请大家尽可能地从App Store下载应用程序，从bigboss源等正版源下载插件，支持正版。后续越狱社区会增加插件购买对支付宝的支持力度，所以更没有理由去选择一些盗版源。体验的话也可以，但如果真的觉得好，就应该为之付费，更何况也就几块钱的事情。</p>
+<p><strong>关于翻墙工具的问题</strong>，有心的同学可以发现，有一些翻墙工具完全是一些反共团体开发制作的，比如“自由门”。我认为，如果你有需求，你应该选择一些客观的工具去观察外面的世界，而开源社区为之做出了很大的努力和贡献。我们希望自由，但有时候却被一些人引向了另一个极端，这很不好，真的很不好。</p>
+<p><strong>关于Shadowsocks</strong>，“影梭”不光可以在iOS端进行代理，更多的是用在桌面端，相关文档官方的项目说明已经很明确，我就不再进行说明。</p>
+<p><strong>致谢</strong></p>
+<ul>
+<li>感谢无偿为Shadowsocks制作和宣传做出贡献的开源社区成员</li>
+<li>感谢无偿为Shadowsocks社区分享服务器的服务器所有者</li>
+<li>感谢Background Manager作者<a href="http://devbug.me" target="_blank" rel="external">deVbug</a></li>
+<li>感谢威锋技术组<a href="http://weibo.com/cdsq?from=inf&amp;wvr=5&amp;loc=infdomain" target="_blank" rel="external">CDSQ</a>汉化</li>
+</ul>
+<h1 id="04，参考资料">04，参考资料</h1>
+<ul>
+<li><a href="https://github.com/shadowsocks/shadowsocks-iOS/wiki/Help" target="_blank" rel="external">Shadowsocks for iOS支持文档</a></li>
+<li><a href="https://github.com/clowwindy/shadowsocks/wiki/Shadowsocks-%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E" target="_blank" rel="external">Shadowsocks 项目地址</a></li>
+<li><a href="http://zh.wikipedia.org/zh-cn/Shadowsocks" target="_blank" rel="external">维基百科-Shadowsocks</a></li>
+</ul>
+<hr>
+<p><strong>愿这个世界更美好</strong></p>
+<p><strong>Jas0ndyq敬上</strong></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2014/11/18/JS学习笔记1/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          JS学习笔记(1)——变量的两种值
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2014/10/04/up_14_10_4/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">从今天起，保存你的“深夜食堂”</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina">微博</a>
+		<a class="jiathis_button_weixin">微信</a>
+		<a class="jiathis_button_qzone">空间</a>
+		<a class="jiathis_button_pocket">Pocket</a>
+		<a class="jiathis_button_copy">网址</a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+		<a class="jiathis_counter_style"></a>
+	</div>
+	<script "text/javascript">
+		var jiathis_config = {
+			ralateuid:{
+				"tsina":"爱薇薇"
+				}
+		}
+	</script> 
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1409496172051494" charset="utf-8">
+
+	</script>
+	<!-- JiaThis Button END -->	
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="up_14_11_12" data-title="使用“影梭”，为你的iOS设备实现全局代理" data-url="http://jas0n.me/2014/11/12/up_14_11_12/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"jas0n"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">
+        &copy; 2014 Jas0ndyq 
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      </div>
+      <br />
+      <div class="CC">
+    	   本站点采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">知识共享署名-非商业性使用-相同方式共享 3.0 未本地化版本许可协议</a>进行许可<br />
+               <div class="mykey">
+        ♥ Standing on the Shoulders of Giants
+      </div>
+      </div>
+      
+    	
+      <br />
+
+
+
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>

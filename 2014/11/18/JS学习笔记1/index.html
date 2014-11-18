@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="apple-touch-icon" href="http://img03.taobaocdn.com/imgextra/i3/665732193/TB2WWWwapXXXXaDXpXXXXXXXXXX_!!665732193.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="http://img03.taobaocdn.com/imgextra/i3/665732193/TB2WWWwapXXXXaDXpXXXXXXXXXX_!!665732193.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="http://img03.taobaocdn.com/imgextra/i3/665732193/TB2PSuCapXXXXXqXXXXXXXXXXXX_!!665732193.png" /> 
+  
+<script type="text/javascript">
+	var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+	document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fb9ab8c85f88622eb244623bc2a0c81cf' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+  <meta charset="utf-8">
+  
+  <title>JS学习笔记(1)——变量的两种值 | Jas0ndyq</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="ECMAScript变量包含两种不同类型的值
+
+基本类型值：包含：数值、字符串、布尔值以及Null和Undefined
+
+引用类型值：保存于内存中的对象">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS学习笔记(1)——变量的两种值">
+<meta property="og:url" content="http://jas0n.me/2014/11/18/JS学习笔记1/">
+<meta property="og:site_name" content="Jas0ndyq">
+<meta property="og:description" content="ECMAScript变量包含两种不同类型的值
+
+基本类型值：包含：数值、字符串、布尔值以及Null和Undefined
+
+引用类型值：保存于内存中的对象">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JS学习笔记(1)——变量的两种值">
+<meta name="twitter:description" content="ECMAScript变量包含两种不同类型的值
+
+基本类型值：包含：数值、字符串、布尔值以及Null和Undefined
+
+引用类型值：保存于内存中的对象">
+
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+  <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<div class="profilepic">
+			<img src="http://img04.taobaocdn.com/imgextra/i4/665732193/TB2S.mlapXXXXaGXXXXXXXXXXXX_!!665732193.png">
+		</div>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Jas0ndyq</a></h1>
+		</hgroup>
+
+
+		
+		<p class="header-subtitle">This is for everyone</p>
+		
+
+		<div class="desc">
+		站在巨人的肩上
+		</div>
+		<nav class="header-menu">
+			<ul class="main">
+				<li><a href="/">博客</a></li>
+				<li><a href="/archives">文章</a></li>
+				<li><a href="/about/about.html">关于</a></li>
+				<li><a href="/other/index">其他</a></li>
+			</ul>
+
+
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/jas0ndyq" title="github">github</a>
+		        
+					<a class="weibo" target="_blank" href="http://weibo.com/jasondyq" title="weibo">weibo</a>
+		        
+					<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+		        
+			</div>
+		</nav>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img src="http://img04.taobaocdn.com/imgextra/i4/665732193/TB2S.mlapXXXXaGXXXXXXXXXXXX_!!665732193.png">
+			</div>
+
+			<hgroup>
+			  <h1 class="header-author"><a href="/">Jas0ndyq</a></h1>
+			</hgroup>
+			
+			<p class="header-subtitle">This is for everyone</p>
+			
+			<nav class="header-menu">
+				<ul class="first">
+					<li><a href="/">博客</a></li>
+					<li><a href="/archives">文章</a></li>
+					
+
+		        <div class="clearfix"></div>
+				</ul>
+				<ul class="second">
+					<li><a href="/about/about.html" target="_blank">关于</a></li>
+					<li><a href="/other/index">其他</a></li>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/jas0ndyq" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/jasondyq" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <article id="post-JS学习笔记1" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2014/11/18/JS学习笔记1/" class="article-date">
+  	<time datetime="2014-11-18T08:45:37.000Z" itemprop="datePublished">11月 18 2014</time>
+</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li></ul>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      JS学习笔记(1)——变量的两种值
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="ECMAScript变量包含两种不同类型的值">ECMAScript变量包含两种不同类型的值</h2>
+<ul>
+<li><p>基本类型值：<br>包含：<strong>数值</strong>、<strong>字符串</strong>、<strong>布尔值</strong>以及<strong>Null</strong>和<strong>Undefined</strong></p>
+</li>
+<li><p>引用类型值：<br>保存于内存中的<strong>对象</strong></p>
+</li>
+</ul>
+<a id="more"></a>
+
+<hr>
+<h2 id="对两种值的操作">对两种值的操作</h2>
+<h4 id="复制变量值">复制变量值</h4>
+<p><strong>1，基本类型值</strong></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> num1 = <span class="number">5</span>;</div><div class="line"><span class="keyword">var</span> num2 = num1</div></pre></td></tr></table></figure>
+
+<p>其中使用变量<code>num1</code>来初始化变量<code>num2</code>，故变量<code>num2</code>也会在内存保存值<code>5</code>，但这里保存的<code>num2</code>的<code>5</code>与<code>num1</code>的<code>5</code>是独立的，任何操作都不会相互影响。<br>例如：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> num1 = <span class="number">5</span>;</div><div class="line"><span class="keyword">var</span> num2 = num1;</div><div class="line">num1 = <span class="number">10</span>;</div><div class="line">alert(num1);    <span class="comment">//返回10</span></div><div class="line">alert(num2);    <span class="comment">//返回5</span></div></pre></td></tr></table></figure>
+
+<p><strong>2，引用类型值</strong></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> obj1 = <span class="keyword">new</span> <span class="built_in">Object</span>();</div><div class="line"><span class="keyword">var</span> obj2 = obj1;</div><div class="line">obj1.name = <span class="string">"Jason"</span>;</div><div class="line">alert(obj2.name);    <span class="comment">//返回"Jason"</span></div></pre></td></tr></table></figure>
+
+<p>其中，用一个新的对象为变量<code>obj1</code>赋值，同时用变量<code>obj1</code>来为变量<code>obj2</code>进行初始化。这里<strong>并不是</strong>将变量<code>obj1</code>的副本保存在变量<code>obj2</code>中，而是提供一个指针指向变量<code>obj1</code>的内存。故，操作结束后，<strong>两个变量引用的是不独立的也即是同一个对象</strong>，所以操作一个变量，另一个变量也会改变。<br>例如：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var <span class="variable">obj1 =</span> new Object();</div><div class="line">var <span class="variable">obj2 =</span> obj1;</div><div class="line">obj1.<span class="variable">name =</span> <span class="string">"Jason"</span>;</div><div class="line">alert(obj2.name);     //返回<span class="string">"Jason"</span></div><div class="line">obj1.<span class="variable">name =</span> <span class="string">"Vivian"</span>;</div><div class="line">alert(obj2.name);    //返回<span class="string">"Vivian"</span></div><div class="line">obj2.<span class="variable">name =</span> <span class="string">"Qiu"</span>;</div><div class="line">alert(obj1.name);    //返回<span class="string">"Qiu"</span></div></pre></td></tr></table></figure>
+
+<hr>
+<h4 id="传递参数">传递参数</h4>
+<p>ECMAScript中，所有函数的参数都是<strong>按值传递</strong>，而<strong>不是按引用传递</strong>。</p>
+<p><strong>1，基本类型值</strong><br>在传递基本类型值时，被传递的值会被直接复制给一个局部变量。<br>例如：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">function addOne(num) {</div><div class="line">    num += <span class="number">1</span>;</div><div class="line">    <span class="keyword">return</span> num;</div><div class="line">}</div><div class="line"><span class="keyword">var</span> count = <span class="number">10</span>;</div><div class="line"><span class="keyword">var</span> <span class="literal">result</span> = addOne(count);</div><div class="line">alert(count);    //返回<span class="string">"10"</span></div><div class="line">alert(<span class="literal">result</span>);    //返回<span class="string">"11"</span></div></pre></td></tr></table></figure>
+
+<p>可见，其中定义变量<code>count</code>为数值<code>10</code>，同时变量<code>count</code>作为参数传递给函数<code>addOne()</code>，这样实际上是将数值<code>10</code>复制给了参数<code>num</code>，故参数<code>num</code>被加上<code>1</code>，而变量<code>count</code>的值不会随之改变。<br><strong>如果是按照引用传递值参数的话，变量<code>count</code>的值也将变为<code>11</code></strong></p>
+<p><strong>2，引用类型值</strong><br>传递引用类型的值也即是将该值的<strong>内存地址</strong>复制给一个局部变量，因此这个局部变量的变化也会体现在外部（这是引用类型值得特性决定的，<strong>不能</strong>以此说明引用类型值是按引用传递的）<br>例如：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">setName</span><span class="params">(obj)</span> </span>{</div><div class="line">    obj.name = <span class="string">"Jason"</span>；</div><div class="line">    obj = <span class="keyword">new</span> <span class="built_in">Object</span>();</div><div class="line">    obj.name = <span class="string">"Vivian"</span>;</div><div class="line">}</div><div class="line"><span class="keyword">var</span> person = <span class="keyword">new</span> <span class="built_in">Object</span>();</div><div class="line">setName(person);</div><div class="line">alert(person.name);    <span class="comment">//返回"Jason"</span></div></pre></td></tr></table></figure>
+
+<p>可见，其中创建新对象并保存在变量<code>person</code>中，而这个变量被的内存地址被复制到了函数<code>setName</code>中。在<code>setName</code>函数中，此时<code>obj</code>和<code>person</code>引用的是同一个对象（即，即使这个变量是按值传递obj也会按引用的规则来访问同一对象），<code>person</code>的内存在内存堆中只有一个，所以，外部的<code>person</code>也会反应内部修改。<br><strong>但，为什么说这样就表示对象时按值传递的呢</strong>，我也是卡在了这里。后来仔细观察代码发现：<br>我们实际上在<strong>函数内部是修改了<code>obj</code>的参数值</strong>也即是：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">obj = <span class="keyword">new</span> <span class="built_in">Object</span>();</div><div class="line">obj.name = <span class="string">"Vivian"</span>;</div></pre></td></tr></table></figure>
+
+<p>而我们发现，最后的</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">alert</span><span class="params">(person.name)</span></span></div></pre></td></tr></table></figure>
+
+<p>不是返回的<code>Vivian</code>，而还是以前的<code>Jason</code>，这就说明了，引用类型值得参数传递并不是按引用传递，也就证明了在ECMAScript中，所有函数的参数传递方式都是按值传递的。<br>回到这段代码中：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">setName</span><span class="params">(obj)</span> </span>{</div><div class="line">    obj.name = <span class="string">"Jason"</span>；</div><div class="line">    obj = <span class="keyword">new</span> <span class="built_in">Object</span>();    <span class="comment">//此处引用的应该属于局部变量</span></div><div class="line">    obj.name = <span class="string">"Vivian"</span>;</div><div class="line">}</div><div class="line"><span class="keyword">var</span> person = <span class="keyword">new</span> <span class="built_in">Object</span>();</div><div class="line">setName(person);</div><div class="line">alert(person.name);</div></pre></td></tr></table></figure>
+
+<p>在函数<code>setName</code>中对参数<code>obj</code>的重写只能将其算作在修改<code>obj</code>这个变量的过程中引用的是一个<strong>局部变量</strong>，而这个局部变量最终<strong>不会影响</strong>到函数外部的代码。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2014/11/12/up_14_11_12/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">使用“影梭”，为你的iOS设备实现全局代理</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina">微博</a>
+		<a class="jiathis_button_weixin">微信</a>
+		<a class="jiathis_button_qzone">空间</a>
+		<a class="jiathis_button_pocket">Pocket</a>
+		<a class="jiathis_button_copy">网址</a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+		<a class="jiathis_counter_style"></a>
+	</div>
+	<script "text/javascript">
+		var jiathis_config = {
+			ralateuid:{
+				"tsina":"爱薇薇"
+				}
+		}
+	</script> 
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1409496172051494" charset="utf-8">
+
+	</script>
+	<!-- JiaThis Button END -->	
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="JS学习笔记1" data-title="JS学习笔记(1)——变量的两种值" data-url="http://jas0n.me/2014/11/18/JS学习笔记1/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"jas0n"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">
+        &copy; 2014 Jas0ndyq 
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      </div>
+      <br />
+      <div class="CC">
+    	   本站点采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">知识共享署名-非商业性使用-相同方式共享 3.0 未本地化版本许可协议</a>进行许可<br />
+               <div class="mykey">
+        ♥ Standing on the Shoulders of Giants
+      </div>
+      </div>
+      
+    	
+      <br />
+
+
+
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>

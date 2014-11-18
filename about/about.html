@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+
+<meta charset="utf-8">
+<title>about me</title>
+<link rel="stylesheet" href="css/jquery.fullPage.css">
+<style>
+.section { text-align: center; font: 50px  "Helvetica Neue LT Pro-Th", "Helvetica Neue Light", "Helvetica Neue", Helvetica, "Microsoft YaHei", Arial, serif; color: #fff; }
+.section1 {background: url("http://img03.taobaocdn.com/imgextra/i3/665732193/TB2TBOeXVXXXXbRXpXXXXXXXXXX_!!665732193.jpg") center no-repeat;}
+.section2 {background: url("http://img03.taobaocdn.com/imgextra/i3/665732193/TB2IWSxapXXXXXgXpXXXXXXXXXX_!!665732193.jpg") center no-repeat; }
+.section2 p { position: relative; left: -120%;}
+.section3 {background: url("http://img03.taobaocdn.com/imgextra/i3/665732193/TB2FXp7XVXXXXcdXpXXXXXXXXXX_!!665732193.jpg") center no-repeat;}
+.section3 p { position: relative; bottom: -120%;}
+.section4 {background: url("http://img01.taobaocdn.com/imgextra/i1/665732193/TB2ngKzapXXXXXoXXXXXXXXXXXX_!!665732193.jpg") center no-repeat;}
+.section4 p { display: none;}
+.section5 {background: url("http://img03.taobaocdn.com/imgextra/i3/665732193/TB2MYKDapXXXXX0XXXXXXXXXXXX_!!665732193.jpg") center no-repeat;}
+.section5 p {display: none;}
+.section6 {background: url("http://img02.taobaocdn.com/imgextra/i2/665732193/TB2kaKyXVXXXXbOXpXXXXXXXXXX_!!665732193.jpg") center no-repeat;}
+.section6 p { position: relative; bottom: -120%;}
+.other {
+	text-align: left;
+	font-size: 15px; 
+	left: -120%; 
+	width: 100%; 
+	margin: 0 auto;
+	text-decoration: none; 
+
+	position: relative;}
+.other2 {
+	text-align: left;
+	font-size: 15px; 
+	right: -120%; 
+	width: 100%; 
+
+	text-decoration: none; 
+
+	position: relative;
+}
+.other ul {float: left; list-style-type: none; position: relative; left: 30%;}
+.other li {float: left; margin-left: 40px;}
+.other2 ul {float: right; list-style-type: none; position: relative; right: 35%;}
+.other2 li {float: right; margin-left: 40px;}
+a.git {opacity: 0.5;}
+.logo {position: relative; bottom: -120%;}
+
+
+</style>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/jquery-ui-1.10.3.min.js"></script>
+<script src="js/jquery.fullPage.min.js"></script>
+<script>
+$(document).ready(function() {
+	$.fn.fullpage({
+		slidesColor: ['#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF'],
+		anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6'],
+		navigation: true,
+		paddingTop: "3%",
+		afterLoad: function(anchorLink, index){
+			if(index == 2){
+				$('.section2').find('p').delay(500).animate({
+					left: '0'
+				}, 1500, 'easeOutExpo');
+			}
+			if(index == 3){
+				$('.section3').find('p').delay(500).animate({
+					bottom: '0'
+				}, 1500, 'easeOutExpo');
+			}
+			if(index == 4){
+				$('.section4').find('p').fadeIn(2000);
+			}
+			if(index == 5){
+				$('.section5').find('p').fadeIn(2000);
+			}
+			if(index == 6){
+				$('.section6').find('p').delay(500).animate({
+					bottom: '0'
+				}, 1500, 'easeOutExpo');
+			}
+			if(index == 6){
+				$('.section6').find('.logo').delay(500).animate({
+					bottom: '0'
+				}, 1500, 'easeOutExpo');
+			}
+			if(index == 6){
+				$('.section6').find('.other').delay(500).animate({
+					left: '-5%'
+				}, 1500, 'easeOutExpo');
+			}
+			if(index == 6){
+				$('.section6').find('.other2').delay(500).animate({
+					right: '-5%'
+				}, 1500, 'easeOutExpo');
+			}
+		},
+		onLeave: function(index, direction){
+			if(index == '2'){
+				$('.section2').find('p').delay(500).animate({
+					left: '-120%'
+				}, 1500, 'easeOutExpo');
+			}
+			if(index == '3'){
+				$('.section3').find('p').delay(500).animate({
+					bottom: '-120%'
+				}, 1500, 'easeOutExpo');
+			}
+			if(index == '4'){
+				$('.section4').find('p').fadeOut(2000);
+			}
+			if(index == '5'){
+				$('.section5').find('p').fadeOut(2000);
+			}
+			if(index == '6'){
+				$('.section6').find('p').delay(500).animate({
+					bottom: '-120%'
+				}, 1500, 'easeOutExpo');
+			}
+			if(index == '6'){
+				$('.section6').find('.logo').delay(500).animate({
+					bottom: '-120%'
+				}, 1500, 'easeOutExpo');
+			}
+			if(index == '6'){
+				$('.section6').find('.other').delay(500).animate({
+					left: '-120%'
+				}, 1500, 'easeOutExpo');
+			}
+			if(index == '6'){
+				$('.section6').find('.other2').delay(500).animate({
+					right: '-120%'
+				}, 1500, 'easeOutExpo');
+			}
+		}
+	});
+});
+</script>
+</head>
+
+<body>
+
+<div class="section section1">
+	<h3>这个世界</h3>
+	<p>或许,她并不美好</p>
+</div>
+<div class="section section2">
+	<h3>抗争、呼喊</h3>
+	<p>沉默始终</p>
+</div>
+<div class="section section3">
+	<h3>行色匆匆</h3>
+	<p>却又，茫然无踪</p>
+</div>
+<div class="section section4">
+	<h3>改变不了世界</h3>
+	<p>却想着让这个世界变好一点</p>
+</div>
+<div class="section section5">
+	<h3>热爱生活，你我共勉</h3>
+	<p>Wish we could do More</p>
+</div>
+<div class="section section6">
+	
+	<div class="logo"><a href="/"><img src="http://img03.taobaocdn.com/imgextra/i3/665732193/TB2PSuCapXXXXXqXXXXXXXXXXXX_!!665732193.png"></a></div>
+	<h3>这是我的个人博客</h3>
+		<p>欢迎访问</p>
+		<div class="other">
+		<ul class="list">
+			<li class="1st"><a href="/" title="主页"><img src="images/home.png"></a></li>
+			<li><a href="http://weibo.com/jasondyq" title="秋秋的微博" target="_blank" rel="external"><img src="images/weibo.png"></a></li>
+		</ul>
+	</div>
+	<div class="other2">
+		<ul class="list">
+			<li class="2nd"><a href="http://twitter.com/jasondyq" title="秋秋的推特儿" target="_blank" rel="external"><img src="images/twitter.png"></a></li>
+			<li class="2nd"><a class="git" href="http://github.com/jas0ndyq" title="秋秋的Github" target="_blank" rel="external"><img src="images/git.png"></a></li>
+		</ul>
+	</div>
+
+
+</div>
+
+
+</body>
+</html>
