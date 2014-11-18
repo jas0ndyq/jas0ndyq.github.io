@@ -173,21 +173,14 @@
 <p><strong>1，基本类型值</strong></p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> num1 = <span class="number">5</span>;</div><div class="line"><span class="keyword">var</span> num2 = num1</div></pre></td></tr></table></figure>
 
-<p>其中使用变量</p>
-<figure class="highlight num1```来初始化变量```num2```，故变量```num2```也会在内存保存值```5```，但这里保存的```num2```的```5```与```num1```的```5```是独立的，任何操作都不会相互影响。"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">例如：</div></pre></td></tr></table></figure>
+<p>其中使用变量<code>num1</code>来初始化变量<code>num2</code>，故变量<code>num2</code>也会在内存保存值<code>5</code>，但这里保存的<code>num2</code>的<code>5</code>与<code>num1</code>的<code>5</code>是独立的，任何操作都不会相互影响。<br>例如：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> num1 = <span class="number">5</span>;</div><div class="line"><span class="keyword">var</span> num2 = num1;</div><div class="line">num1 = <span class="number">10</span>;</div><div class="line">alert(num1);    <span class="comment">//返回10</span></div><div class="line">alert(num2);    <span class="comment">//返回5</span></div></pre></td></tr></table></figure>
 
-<pre><code><span class="keyword">var</span> num1 = <span class="number">5</span>;
-<span class="keyword">var</span> num2 = num1;
-num1 = <span class="number">10</span>;
-alert(num1);    <span class="comment">//返回10</span>
-alert(num2);    <span class="comment">//返回5</span>
-</code></pre><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div><div class="line"><span class="gherkin"><span class="keyword">*</span><span class="keyword">*</span>2，引用类型值<span class="keyword">*</span><span class="keyword">*</span></span></div></pre></td></tr></table></figure>
+<p><strong>2，引用类型值</strong></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> obj1 = <span class="keyword">new</span> <span class="built_in">Object</span>();</div><div class="line"><span class="keyword">var</span> obj2 = obj1;</div><div class="line">obj1.name = <span class="string">"Jason"</span>;</div><div class="line">alert(obj2.name);    <span class="comment">//返回"Jason"</span></div></pre></td></tr></table></figure>
 
-<p>var obj1 = new Object();<br>var obj2 = obj1;<br>obj1.name = “Jason”;<br>alert(obj2.name);    //返回”Jason”</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">其中，用一个新的对象为变量</div></pre></td></tr></table></figure>
-
-<p>obj1</p>
-<figure class="highlight 赋值，同时用变量```obj1```来为变量```obj2```进行初始化。这里**并不是**将变量```obj1```的副本保存在变量```obj2```中，而是提供一个指针指向变量```obj1```的内存。故，操作结束后，**两个变量引用的是不独立的也即是同一个对象**，所以操作一个变量，另一个变量也会改变。"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">例如：</div></pre></td></tr></table></figure>
+<p>其中，用一个新的对象为变量</p>
+<figure class="highlight obj1```赋值，同时用变量```obj1```来为变量```obj2```进行初始化。这里**并不是**将变量```obj1```的副本保存在变量```obj2```中，而是提供一个指针指向变量```obj1```的内存。故，操作结束后，**两个变量引用的是不独立的也即是同一个对象**，所以操作一个变量，另一个变量也会改变。"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">例如：</div></pre></td></tr></table></figure>
 
 <p>var obj1 = new Object();<br>var obj2 = obj1;<br>obj1.name = “Jason”;<br>alert(obj2.name);     //返回”Jason”<br>obj1.name = “Vivian”;<br>alert(obj2.name);    //返回”Vivian”<br>obj2.name = “Qiu”;<br>alert(obj1.name);    //返回”Qiu”</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">---</div><div class="line"></div><div class="line"><span class="comment">####传递参数</span></div><div class="line">ECMAScript中，所有函数的参数都是<span class="keyword">*</span><span class="keyword">*</span>按值传递<span class="keyword">*</span><span class="keyword">*</span>，而<span class="keyword">*</span><span class="keyword">*</span>不是按引用传递<span class="keyword">*</span><span class="keyword">*</span>。</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">*</span><span class="keyword">*</span>1，基本类型值<span class="keyword">*</span><span class="keyword">*</span></div><div class="line">在传递基本类型值时，被传递的值会被直接复制给一个局部变量。</div><div class="line">例如：</div></pre></td></tr></table></figure>
