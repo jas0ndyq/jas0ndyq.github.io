@@ -391,6 +391,7 @@ a {
 }
 #header {
   width: 100%;
+  margin: 0, auto;
   font-family: "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 #header a {
@@ -436,12 +437,19 @@ a {
   -webkit-box-orient: vertical;
 }
 #header .header-menu {
+  width: 100%;
   text-align: center;
-  margin-top: 100px;
+  position: relative;
   font-weight: 10;
 }
 #header .header-menu ul {
+  margin-top: 30%;
   text-align: center;
+}
+@media screen and (max-width: 1040px) {
+  #header .header-menu ul {
+    margin-left: 21%;
+  }
 }
 #header .header-menu a {
   text-align: center;
@@ -453,9 +461,10 @@ a {
   border-radius: 300px;
   width: 100px;
   padding: 3px;
+  position: relative;
   margin-top: 15px;
   margin-bottom: 15px;
-  margin-left: 17%;
+  margin-left: 15%;
   text-align: center;
   text-color: #fff;
   font-size: 25px;
@@ -471,6 +480,11 @@ a {
 #header .header-nav {
   margin-top: 80%;
   text-align: center;
+}
+@media screen and (max-width: 1040px) {
+  #header .header-nav {
+    margin-top: 150%;
+  }
 }
 #header .header-nav .social {
   margin-right: 15px;
