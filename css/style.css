@@ -187,22 +187,29 @@ a {
 #container #mobile-nav {
   display: none;
 }
+#container #mobile-nav .overlay {
+  height: 50%;
+  position: absolute;
+  width: 100%;
+  background: #4d4d4d;
+}
 #container #mobile-nav #header {
-  padding: 10px 0 0 0;
   background: url("http://img02.taobaocdn.com/imgextra/i2/665732193/TB2uGXMbXXXXXXmXXXXXXXXXXXX_!!665732193.jpg") no-repeat center;
+  height: 300px;
 }
 #container #mobile-nav #header .profilepic {
   position: relative;
-  margin-top: 20%;
+  margin-top: 0;
 }
 #container #mobile-nav #header .header-author {
   position: relative;
-  margin-top: 5%;
+  margin-top: 0;
   font-family: "Helvetica Neue LT Pro-Th", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 #container #mobile-nav #header .header-menu {
   width: 250px;
   margin: 0 auto;
+  margin-top: -50px;
   text-align: center;
 }
 #container #mobile-nav #header .header-menu ul {
