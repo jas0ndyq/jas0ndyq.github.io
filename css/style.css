@@ -186,16 +186,12 @@ a {
 }
 #container #mobile-nav {
   display: none;
-}
-#container #mobile-nav .overlay {
-  height: 50%;
-  position: absolute;
-  width: 100%;
-  background: #4d4d4d;
+  background: url("http://img02.taobaocdn.com/imgextra/i2/665732193/TB2uGXMbXXXXXXmXXXXXXXXXXXX_!!665732193.jpg") no-repeat center;
 }
 #container #mobile-nav #header {
-  background: url("http://img02.taobaocdn.com/imgextra/i2/665732193/TB2uGXMbXXXXXXmXXXXXXXXXXXX_!!665732193.jpg") no-repeat center;
+  padding-top: 50px;
   height: 300px;
+  position: relative;
 }
 #container #mobile-nav #header .profilepic {
   position: relative;
@@ -203,7 +199,7 @@ a {
 }
 #container #mobile-nav #header .header-author {
   position: relative;
-  margin-top: 0;
+  margin-top: 10px;
   font-family: "Helvetica Neue LT Pro-Th", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 #container #mobile-nav #header .header-menu {
