@@ -4,7 +4,7 @@
   <subtitle><![CDATA[This is for everyone]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://jas0n.me/"/>
-  <updated>2014-11-29T13:24:45.801Z</updated>
+  <updated>2014-11-29T13:29:40.148Z</updated>
   <id>http://jas0n.me/</id>
   
   <author>
@@ -13,6 +13,43 @@
   </author>
   
   <generator uri="http://zespia.tw/hexo/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[JS学习笔记(2)——变量对象的执行环境]]></title>
+    <link href="http://jas0n.me/2014/11/29/JS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02/"/>
+    <id>http://jas0n.me/2014/11/29/JS学习笔记2/</id>
+    <published>2014-11-29T13:28:06.000Z</published>
+    <updated>2014-11-29T13:29:27.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="ECMAScript变量执行环境和作用域有与其他语言类似的地方，也有其自身的特色。">ECMAScript变量执行环境和作用域有与其他语言类似的地方，也有其自身的特色。</h2>
+<ol>
+<li>代码执行是通过变量对象的作用域链来判断执行条件的。</li>
+<li>内部环境可以通过作用域链访问外部环境；外部环境不能访问内部环境的任何变量和函数。</li>
+<li>JS没有块级作用域。</li>
+</ol>
+<p><strong>作用域链的访问</strong><br>变量对象由内到外，逐级访问。<br>栗子：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> color =<span class="string">"blue"</span>;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">changeColor</span><span class="params">()</span> </span>{</div><div class="line">    <span class="keyword">var</span> anotherColor = <span class="string">"red"</span>;</div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">countColors</span><span class="params">()</span> </span>{</div><div class="line">        <span class="keyword">var</span> tempColor = anotherColor;</div><div class="line">        anotherColor = color;</div><div class="line">        color = tempColor;</div><div class="line">    }</div><div class="line">    countColors();</div><div class="line">}</div><div class="line">changeColor();</div></pre></td></tr></table></figure>
+
+<p>其中，<br><code>countColors()</code>函数可以访问到变量：<code>tempColor</code>/<code>anotherColor</code>/<code>color</code>;<br><code>changeColor()</code>函数可以访问到变量：<code>anotherColor</code>/方法：<code>countColors()</code>;<br>外部环境永远无法访问内部的变量对象，这些环境之间的联系是线性的，是有次序的。每个环境都是向上搜索作用域链，以便查询变量和函数名。</p>
+<p><strong>没有块级作用域</strong><br>主要体现在<code>if</code>条件语句和<code>for</code>循环语句上。<br>栗子：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (<span class="literal">true</span>) {</div><div class="line">   <span class="keyword">var</span> color = <span class="string">"blue"</span>;</div><div class="line">}</div><div class="line">alert(color)    <span class="comment">//会返回"blue"</span></div><div class="line"></div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i=<span class="number">0</span>; i &lt; <span class="number">10</span>; i++) {</div><div class="line"><span class="built_in">document</span>.write(i);    <span class="comment">//返回写入"0123456789'</span></div><div class="line">}</div><div class="line">alert(i)    <span class="comment">//返回"10'</span></div></pre></td></tr></table></figure>
+
+<p>其中，由于没有块级作用域，变量<code>color</code>不会在if语句结束后就销毁，反而会将变量添加到当前执行环。在<code>for</code>循环中也是一样，尤其需要注意在<strong>循环内</strong>和<strong>循环外</strong>变量表示的意义。</p>
+<p>在函数中，遵循变量声明格式<code>var + 变量</code>声明当前作用域的变量（多为局部变量），而直接的<code>变量</code>声明全局变量。例如：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">function add(num1, num2) {</div><div class="line">    <span class="keyword">var</span> sum = num1 + num2;   //局部变量，函数执行完毕则销毁</div><div class="line">    <span class="keyword">return</span> sum;</div><div class="line">}</div><div class="line"><span class="keyword">var</span> <span class="literal">result</span> =add(<span class="number">10</span>, <span class="number">20</span>);    //返回<span class="string">"30"</span></div><div class="line">alert(sum);    //局部变量，无法返回值，导致错误</div></pre></td></tr></table></figure>
+
+<p>同时需要注意的是，如果局部环境和全局环境拥有同名标识符，会搜索局部环境的变量而不会搜索全局变量，如果要搜索全局变量，只有通过<code>window.变量</code>的方式，例如：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> color = <span class="string">"blue"</span>;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getColor</span><span class="params">()</span> </span>{</div><div class="line">    <span class="keyword">var</span> color = <span class="string">"red"</span>;</div><div class="line">    <span class="keyword">return</span> color;</div><div class="line">}</div><div class="line">alert(getColor())    <span class="comment">//返回"red"</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getColor</span><span class="params">()</span> </span>{</div><div class="line">    <span class="keyword">var</span> color = <span class="string">"red"</span>;</div><div class="line">    <span class="keyword">return</span> <span class="built_in">window</span>.color;</div><div class="line">}</div><div class="line">alert(getColor())    <span class="comment">//返回"blue"</span></div></pre></td></tr></table></figure>
+
+<p>不使用<code>window.color</code>无法访问全局变量<code>color</code>，而这样才不会导致混乱。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="ECMAScript变量执行环境和作用域有与其他语言类似的地方，也有其自身的特色。">ECMAScript变量执行环境和作用域有与其他语言类似的地方，也有其自身的特色。</h2>
+<ol>
+<li>代码执行是通过变量对象的作用域链来判断执行条件的。</li>
+<l]]>
+    </summary>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[JS学习笔记(1)——变量的两种值]]></title>
