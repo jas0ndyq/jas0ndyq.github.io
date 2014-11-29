@@ -4,7 +4,7 @@
   <subtitle><![CDATA[This is for everyone]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://jas0n.me/"/>
-  <updated>2014-11-29T15:00:39.513Z</updated>
+  <updated>2014-11-29T15:03:22.978Z</updated>
   <id>http://jas0n.me/</id>
   
   <author>
@@ -19,8 +19,8 @@
     <link href="http://jas0n.me/2014/11/29/JS%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02/"/>
     <id>http://jas0n.me/2014/11/29/JS学习笔记2/</id>
     <published>2014-11-29T13:28:06.000Z</published>
-    <updated>2014-11-29T13:31:23.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="ECMAScript变量执行环境和作用域有与其他语言类似的地方，也有其自身的特色。">ECMAScript变量执行环境和作用域有与其他语言类似的地方，也有其自身的特色。</h2>
+    <updated>2014-11-29T15:03:14.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="ECMAScript变量执行环境和作用域有与其他语言类似的地方，也有其自身的特色。">ECMAScript变量执行环境和作用域有与其他语言类似的地方，也有其自身的特色。</h1>
 <ol>
 <li>代码执行是通过变量对象的作用域链来判断执行条件的。</li>
 <li>内部环境可以通过作用域链访问外部环境；外部环境不能访问内部环境的任何变量和函数。</li>
@@ -45,7 +45,7 @@
 <p>不使用<code>window.color</code>无法访问全局变量<code>color</code>，而这样才不会导致混乱。</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h2 id="ECMAScript变量执行环境和作用域有与其他语言类似的地方，也有其自身的特色。">ECMAScript变量执行环境和作用域有与其他语言类似的地方，也有其自身的特色。</h2>
+    <![CDATA[<h1 id="ECMAScript变量执行环境和作用域有与其他语言类似的地方，也有其自身的特色。">ECMAScript变量执行环境和作用域有与其他语言类似的地方，也有其自身的特色。</h1>
 <ol>
 <li>代码执行是通过变量对象的作用域链来判断执行条件的。</li>
 <li>内部环境可以通过作用域链访问外部环境；外部环境不能访问内部环境的任何变量和函数。</li>
