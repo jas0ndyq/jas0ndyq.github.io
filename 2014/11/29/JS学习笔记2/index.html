@@ -18,10 +18,7 @@
 
 代码执行是通过变量对象的作用域链来判断执行条件的。
 内部环境可以通过作用域链访问外部环境；外部环境不能访问内部环境的任何变量和函数。
-JS没有块级作用域。
-
-作用域链的访问变量对象由内到外，逐级访问。栗子：
-1234567891011var color ='blue';function changeColor()">
+JS没有块级作用域。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JS学习笔记(2)——变量对象的执行环境">
 <meta property="og:url" content="http://jas0n.me/2014/11/29/JS学习笔记2/">
@@ -30,20 +27,14 @@ JS没有块级作用域。
 
 代码执行是通过变量对象的作用域链来判断执行条件的。
 内部环境可以通过作用域链访问外部环境；外部环境不能访问内部环境的任何变量和函数。
-JS没有块级作用域。
-
-作用域链的访问变量对象由内到外，逐级访问。栗子：
-1234567891011var color ='blue';function changeColor()">
+JS没有块级作用域。">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS学习笔记(2)——变量对象的执行环境">
 <meta name="twitter:description" content="ECMAScript变量执行环境和作用域有与其他语言类似的地方，也有其自身的特色。
 
 代码执行是通过变量对象的作用域链来判断执行条件的。
 内部环境可以通过作用域链访问外部环境；外部环境不能访问内部环境的任何变量和函数。
-JS没有块级作用域。
-
-作用域链的访问变量对象由内到外，逐级访问。栗子：
-1234567891011var color ='blue';function changeColor()">
+JS没有块级作用域。">
 
   
   
@@ -171,6 +162,8 @@ JS没有块级作用域。
 <li>内部环境可以通过作用域链访问外部环境；外部环境不能访问内部环境的任何变量和函数。</li>
 <li>JS没有块级作用域。</li>
 </ol>
+<a id="more"></a>
+
 <p><strong>作用域链的访问</strong><br>变量对象由内到外，逐级访问。<br>栗子：</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> color =<span class="string">"blue"</span>;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">changeColor</span><span class="params">()</span> </span>{</div><div class="line">    <span class="keyword">var</span> anotherColor = <span class="string">"red"</span>;</div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">countColors</span><span class="params">()</span> </span>{</div><div class="line">        <span class="keyword">var</span> tempColor = anotherColor;</div><div class="line">        anotherColor = color;</div><div class="line">        color = tempColor;</div><div class="line">    }</div><div class="line">    countColors();</div><div class="line">}</div><div class="line">changeColor();</div></pre></td></tr></table></figure>
 
