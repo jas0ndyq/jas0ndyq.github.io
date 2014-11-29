@@ -483,7 +483,7 @@ a {
 }
 @media screen and (max-width: 1040px) {
   #header .header-nav {
-    margin-top: 150%;
+    margin-top: 130%;
   }
 }
 #header .header-nav .social {
