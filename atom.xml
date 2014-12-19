@@ -4,7 +4,7 @@
   <subtitle><![CDATA[This is for everyone]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://jas0n.me/"/>
-  <updated>2014-12-19T11:56:52.500Z</updated>
+  <updated>2014-12-19T11:58:06.691Z</updated>
   <id>http://jas0n.me/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://jas0n.me/2014/12/19/weibo_robot/"/>
     <id>http://jas0n.me/2014/12/19/weibo_robot/</id>
     <published>2014-12-19T11:51:06.000Z</published>
-    <updated>2014-12-19T11:56:44.000Z</updated>
+    <updated>2014-12-19T11:57:56.000Z</updated>
     <content type="html"><![CDATA[<blockquote>
 <p>好吧，说是机器人太装逼了，其实就是一个通过微博定时发送天气的python脚本。嘻嘻～</p>
 </blockquote>
@@ -75,7 +75,7 @@
 <li><a href="http://tool.lu/crontab/" target="_blank" rel="external">iBox在线工具</a></li>
 </ul>
 <hr>
-<p><strong>jas0ndyq敬上</strong></p>
+<p><strong>Jas0ndyq敬上</strong></p>
 ]]></content>
     <summary type="html">
     <![CDATA[<blockquote>
