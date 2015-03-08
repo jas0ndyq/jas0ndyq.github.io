@@ -1,186 +1,229 @@
 <!DOCTYPE html>
-
-<html lang="zh-CN">
+<html>
 <head>
-
-<meta charset="utf-8">
-<title>about me</title>
-<link rel="stylesheet" href="css/jquery.fullPage.css">
-<style>
-.section { text-align: center; font: 50px  "Helvetica Neue LT Pro-Th", "Helvetica Neue Light", "Helvetica Neue", Helvetica, "Microsoft YaHei", Arial, serif; color: #fff; }
-.section1 {background: url("http://img03.taobaocdn.com/imgextra/i3/665732193/TB2TBOeXVXXXXbRXpXXXXXXXXXX_!!665732193.jpg") center no-repeat;}
-.section2 {background: url("http://img03.taobaocdn.com/imgextra/i3/665732193/TB2IWSxapXXXXXgXpXXXXXXXXXX_!!665732193.jpg") center no-repeat; }
-.section2 p { position: relative; left: -120%;}
-.section3 {background: url("http://img03.taobaocdn.com/imgextra/i3/665732193/TB2FXp7XVXXXXcdXpXXXXXXXXXX_!!665732193.jpg") center no-repeat;}
-.section3 p { position: relative; bottom: -120%;}
-.section4 {background: url("http://img01.taobaocdn.com/imgextra/i1/665732193/TB2ngKzapXXXXXoXXXXXXXXXXXX_!!665732193.jpg") center no-repeat;}
-.section4 p { display: none;}
-.section5 {background: url("http://img03.taobaocdn.com/imgextra/i3/665732193/TB2MYKDapXXXXX0XXXXXXXXXXXX_!!665732193.jpg") center no-repeat;}
-.section5 p {display: none;}
-.section6 {background: url("http://img02.taobaocdn.com/imgextra/i2/665732193/TB2kaKyXVXXXXbOXpXXXXXXXXXX_!!665732193.jpg") center no-repeat;}
-.section6 p { position: relative; bottom: -120%;}
-.other {
-	text-align: left;
-	font-size: 15px; 
-	left: -120%; 
-	width: 100%; 
-	margin: 0 auto;
-	text-decoration: none; 
-
-	position: relative;}
-.other2 {
-	text-align: left;
-	font-size: 15px; 
-	right: -120%; 
-	width: 100%; 
-
-	text-decoration: none; 
-
-	position: relative;
-}
-.other ul {float: left; list-style-type: none; position: relative; left: 30%;}
-.other li {float: left; margin-left: 40px;}
-.other2 ul {float: right; list-style-type: none; position: relative; right: 35%;}
-.other2 li {float: right; margin-left: 40px;}
-a.git {opacity: 0.5;}
-.logo {position: relative; bottom: -120%;}
-
-
-</style>
-<script src="js/jquery-1.8.3.min.js"></script>
-<script src="js/jquery-ui-1.10.3.min.js"></script>
-<script src="js/jquery.fullPage.min.js"></script>
-<script>
-$(document).ready(function() {
-	$.fn.fullpage({
-		slidesColor: ['#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF'],
-		anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6'],
-		navigation: true,
-		paddingTop: "3%",
-		afterLoad: function(anchorLink, index){
-			if(index == 2){
-				$('.section2').find('p').delay(500).animate({
-					left: '0'
-				}, 1500, 'easeOutExpo');
-			}
-			if(index == 3){
-				$('.section3').find('p').delay(500).animate({
-					bottom: '0'
-				}, 1500, 'easeOutExpo');
-			}
-			if(index == 4){
-				$('.section4').find('p').fadeIn(2000);
-			}
-			if(index == 5){
-				$('.section5').find('p').fadeIn(2000);
-			}
-			if(index == 6){
-				$('.section6').find('p').delay(500).animate({
-					bottom: '0'
-				}, 1500, 'easeOutExpo');
-			}
-			if(index == 6){
-				$('.section6').find('.logo').delay(500).animate({
-					bottom: '0'
-				}, 1500, 'easeOutExpo');
-			}
-			if(index == 6){
-				$('.section6').find('.other').delay(500).animate({
-					left: '-5%'
-				}, 1500, 'easeOutExpo');
-			}
-			if(index == 6){
-				$('.section6').find('.other2').delay(500).animate({
-					right: '-5%'
-				}, 1500, 'easeOutExpo');
-			}
-		},
-		onLeave: function(index, direction){
-			if(index == '2'){
-				$('.section2').find('p').delay(500).animate({
-					left: '-120%'
-				}, 1500, 'easeOutExpo');
-			}
-			if(index == '3'){
-				$('.section3').find('p').delay(500).animate({
-					bottom: '-120%'
-				}, 1500, 'easeOutExpo');
-			}
-			if(index == '4'){
-				$('.section4').find('p').fadeOut(2000);
-			}
-			if(index == '5'){
-				$('.section5').find('p').fadeOut(2000);
-			}
-			if(index == '6'){
-				$('.section6').find('p').delay(500).animate({
-					bottom: '-120%'
-				}, 1500, 'easeOutExpo');
-			}
-			if(index == '6'){
-				$('.section6').find('.logo').delay(500).animate({
-					bottom: '-120%'
-				}, 1500, 'easeOutExpo');
-			}
-			if(index == '6'){
-				$('.section6').find('.other').delay(500).animate({
-					left: '-120%'
-				}, 1500, 'easeOutExpo');
-			}
-			if(index == '6'){
-				$('.section6').find('.other2').delay(500).animate({
-					right: '-120%'
-				}, 1500, 'easeOutExpo');
-			}
-		}
-	});
-});
+  <link rel="apple-touch-icon" href="http://img03.taobaocdn.com/imgextra/i3/665732193/TB2WWWwapXXXXaDXpXXXXXXXXXX_!!665732193.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="http://img03.taobaocdn.com/imgextra/i3/665732193/TB2WWWwapXXXXaDXpXXXXXXXXXX_!!665732193.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="http://img03.taobaocdn.com/imgextra/i3/665732193/TB2PSuCapXXXXXqXXXXXXXXXXXX_!!665732193.png" /> 
+  
+<script type="text/javascript">
+	var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+	document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fb9ab8c85f88622eb244623bc2a0c81cf' type='text/javascript'%3E%3C/script%3E"));
 </script>
+
+  <meta charset="utf-8">
+  
+  <title>关于 | Jas0ndyq</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="这是我的个人博客
+它被用以记录我对这个世界的一些看法。
+此博客由Hexo驱动
+所有文章均采用知识共享署名-非商业性使用-相同方式共享 3.0 未本地化版本许可协议进行许可。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="关于">
+<meta property="og:url" content="http://jas0n.me/about/about.html">
+<meta property="og:site_name" content="Jas0ndyq">
+<meta property="og:description" content="这是我的个人博客
+它被用以记录我对这个世界的一些看法。
+此博客由Hexo驱动
+所有文章均采用知识共享署名-非商业性使用-相同方式共享 3.0 未本地化版本许可协议进行许可。">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="关于">
+<meta name="twitter:description" content="这是我的个人博客
+它被用以记录我对这个世界的一些看法。
+此博客由Hexo驱动
+所有文章均采用知识共享署名-非商业性使用-相同方式共享 3.0 未本地化版本许可协议进行许可。">
+
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+  <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
 </head>
-
 <body>
-
-<div class="section section1">
-	<h3>这个世界</h3>
-	<p>或许,她并不美好</p>
-</div>
-<div class="section section2">
-	<h3>抗争、呼喊</h3>
-	<p>沉默始终</p>
-</div>
-<div class="section section3">
-	<h3>行色匆匆</h3>
-	<p>却又，茫然无踪</p>
-</div>
-<div class="section section4">
-	<h3>改变不了世界</h3>
-	<p>却想着让这个世界变好一点</p>
-</div>
-<div class="section section5">
-	<h3>热爱生活，你我共勉</h3>
-	<p>Wish we could do More</p>
-</div>
-<div class="section section6">
-	
-	<div class="logo"><a href="/"><img src="http://img03.taobaocdn.com/imgextra/i3/665732193/TB2PSuCapXXXXXqXXXXXXXXXXXX_!!665732193.png"></a></div>
-	<h3>这是我的个人博客</h3>
-		<p>欢迎访问</p>
-		<div class="other">
-		<ul class="list">
-			<li class="1st"><a href="/" title="主页"><img src="images/home.png"></a></li>
-			<li><a href="http://weibo.com/jasondyq" title="秋秋的微博" target="_blank" rel="external"><img src="images/weibo.png"></a></li>
+  <div id="container">
+    <div class="left-col">
+    <div class="upper">
+	<p class="name">Jas0n</p>
+	<nav class="header-menu1">
+		<ul class="main1">
+			<a href="/">博客</a>
+			<a href="/archives">文章</a>
+			<a href="/about/about.html">关于</a>
+			<a href="/other/index">其他</a>
 		</ul>
-	</div>
-	<div class="other2">
-		<ul class="list">
-			<li class="2nd"><a href="http://twitter.com/jasondyq" title="秋秋的推特儿" target="_blank" rel="external"><img src="images/twitter.png"></a></li>
-			<li class="2nd"><a class="git" href="http://github.com/jas0ndyq" title="秋秋的Github" target="_blank" rel="external"><img src="images/git.png"></a></li>
-		</ul>
-	</div>
-
+	</nav>
 
 </div>
 
 
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img src="http://img04.taobaocdn.com/imgextra/i4/665732193/TB2S.mlapXXXXaGXXXXXXXXXXXX_!!665732193.png">
+			</div>
+
+			<hgroup>
+			  <h1 class="header-author"><a href="/">Jas0ndyq</a></h1>
+			</hgroup>
+			
+			<p class="header-subtitle">This is for everyone</p>
+			
+			<nav class="header-menu">
+				<ul class="first">
+					<li><a href="/">博客</a></li>
+					<li><a href="/archives">文章</a></li>
+					
+
+		        <div class="clearfix"></div>
+				</ul>
+				<ul class="second">
+					<li><a href="/about/about.html" target="_blank">关于</a></li>
+					<li><a href="/other/index">其他</a></li>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/jas0ndyq" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/jasondyq" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="/atom.xml" title="rss">rss</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/about/about.html" class="article-date">
+  	<time datetime="2015-03-08T11:53:07.000Z" itemprop="datePublished">3月08日</time>
+</a>
+      
+      
+    </div>
+  
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      关于
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="这是我的个人博客">这是我的个人博客</h2>
+<p>它被用以记录我对这个世界的一些看法。</p>
+<h2 id="此博客由Hexo驱动">此博客由<a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>驱动</h2>
+<p>所有文章均采用<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" target="_blank" rel="external">知识共享署名-非商业性使用-相同方式共享 3.0 未本地化版本许可协议</a>进行许可。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+    </footer>
+  </div>
+  
+    
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina">微博</a>
+		<a class="jiathis_button_weixin">微信</a>
+		<a class="jiathis_button_qzone">空间</a>
+		<a class="jiathis_button_pocket">Pocket</a>
+		<a class="jiathis_button_copy">网址</a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+		<a class="jiathis_counter_style"></a>
+	</div>
+	<script "text/javascript">
+		var jiathis_config = {
+			ralateuid:{
+				"tsina":"爱薇薇"
+				}
+		}
+	</script> 
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1409496172051494" charset="utf-8">
+
+	</script>
+	<!-- JiaThis Button END -->	
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="undefined" data-title="关于" data-url="http://jas0n.me/about/about.html"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"jas0n"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">
+        &copy; 2015 Jas0ndyq 
+       
+      </div>
+      <br />
+      <div class="CC">
+               <div class="mykey">
+        ♥ Standing on the Shoulders of Giants
+      </div>
+      </div>
+      
+    	
+      <br />
+
+
+
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
 </body>
 </html>
