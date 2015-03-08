@@ -237,6 +237,10 @@ a {
   font-size: 50px;
   margin-top: 1%;
 }
+#container .left-col p.name a {
+  display: block;
+  color: #333;
+}
 #container .left-col nav {
   margin-top: 1%;
   position: relative;
@@ -254,7 +258,7 @@ a {
   position: relative;
 }
 #container .left-col nav a {
-  font-size: 20px;
+  font-size: 15px;
   color: #fff;
   margin-left: 10px;
 }
