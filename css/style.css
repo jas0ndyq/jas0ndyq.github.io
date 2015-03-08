@@ -186,7 +186,6 @@ a {
 }
 #container #mobile-nav {
   display: none;
-  background: url("http://img02.taobaocdn.com/imgextra/i2/665732193/TB2uGXMbXXXXXXmXXXXXXXXXXXX_!!665732193.jpg") no-repeat center;
 }
 #container #mobile-nav #header {
   padding-top: 50px;
@@ -270,14 +269,44 @@ a {
 }
 @media screen and (max-width: 800px) {
   #container .left-col {
-    display: none;
+    height: 10%;
+    position: relative;
+  }
+  #container .left-col p.name {
+    text-align: center;
+    font-size: 25px;
+    margin-top: 1%;
+  }
+  #container .left-col p.name a {
+    color: #333;
+  }
+  #container .left-col nav {
+    margin-top: 1%;
+    position: relative;
+    width: 100%;
+    background: #333;
+    line-height: 15px;
+    min-height: 15px;
+    display: block;
+  }
+  #container .left-col nav ul {
+    text-align: center;
+    overflow: auto;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+  }
+  #container .left-col nav a {
+    font-size: 15px;
+    color: #fff;
+    margin-left: 10px;
   }
   #container .mid-col {
-    left: 0;
+    position: relative;
+    min-height: 100%;
     background: #fff;
-  }
-  #container .header-subtitle {
-    padding: 0 24px;
+    width: 100%;
+    margin: 0 auto;
   }
   #container .article {
     padding: 10px;
