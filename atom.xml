@@ -4,7 +4,7 @@
   <subtitle><![CDATA[This is for everyone]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://jas0n.me/"/>
-  <updated>2015-03-22T05:18:46.365Z</updated>
+  <updated>2015-03-25T05:10:40.326Z</updated>
   <id>http://jas0n.me/</id>
   
   <author>
@@ -337,12 +337,13 @@
     <link href="http://jas0n.me/2014/10/04/up_14_10_4/"/>
     <id>http://jas0n.me/2014/10/04/up_14_10_4/</id>
     <published>2014-10-04T06:18:58.000Z</published>
-    <updated>2014-12-19T11:56:29.000Z</updated>
+    <updated>2015-03-25T05:10:21.000Z</updated>
     <content type="html"><![CDATA[<blockquote>
 <p><strong>生活总是为一些突然的小点子所美好</strong><br><em>——我说的</em> ^_^</p>
 </blockquote>
 <p>喜欢用Pocket来保存我喜欢的文章，以前也跟风用过印象笔记（反正我觉得不好用，icon也丑得一逼），也喜欢用RSS来订阅博客或者其他站点的更新。而且，Pocket和RSS订阅的交互可以用IFTTT来联系。这种美好组合一直到我遇见知乎日报才结束，这货居然不提供RSS订阅。而其中，我最喜欢的一个栏目是<a href="http://youzhihu.com/section/1" target="_blank" rel="external">深夜食堂</a>，不管当时看不看，我都喜欢把它先存入我的Pocket，没事的时候可以看看。但是，要是我十天半月不去点开知乎日报的客户端，我特么就没办法存啊。。。然而，我总相信，能够有什么方法可以解决这个问题，也就产生了以下实践，共勉。<br><a id="more"></a></p>
 <hr>
+<p><strong>15年3月更新</strong>：<br>youzhihu.com这个网站已经停止服务，推荐使用<a href="http://miantiao.me/zhihu-daily-rss.html" target="_blank" rel="external">这个博主</a>进行订阅。</p>
 <h1 id="00，准备工作">00，准备工作</h1>
 <p>1，可用的深夜食堂HTML<a href="http://youzhihu.com/section/1" target="_blank" rel="external">地址</a><br>2，一个生成RSS链接的工具，<a href="http://feed43.com/" target="_blank" rel="external">Feed43</a><br>3，一个能够强制生成全文的RSS工具，<a href="http://feedex.net/" target="_blank" rel="external">FeedEx</a><br>4，IFTTT账户，<a href="https://ifttt.com/" target="_blank" rel="external">IFTTT</a><br>5，Pocket账户，<a href="http://getpocket.com/" target="_blank" rel="external">Pocket</a><br>6，基础HTML/CSS知识（小白无影响，可以自动忽略）<br><br></p>
 <h1 id="01，找到地址">01，找到地址</h1>
@@ -379,7 +380,7 @@
 <li>维基：<a href="http://zh.wikipedia.org/zh/RSS" target="_blank" rel="external">RSS</a></li>
 </ul>
 <h2><br></h2>
-<p>更新：<br>1，经过两天的测试，发现该<a href="http://youzhihu.com/section/1" target="_blank" rel="external">站点的“深夜食堂”栏目</a>有些不稳定，会偶尔出现没有抓取到的情况，这是该站点的问题，我会联系作者尽快解决。<br><del>2，顺便做了一个“瞎扯-如何正确的吐槽”的全文RSS输出：<a href="http://feedex.net/feed/feed43.com/tucao.xml" target="_blank" rel="external">http://feedex.net/feed/feed43.com/tucao.xml</a><br>3，上次居然忘了写“深夜食堂”的全文输出地址，真是惭愧，现在补上：<a href="http://feedex.net/feed/feed43.com/zhihustory.xml" target="_blank" rel="external">http://feedex.net/feed/feed43.com/zhihustory.xml</a></del><br>FeedEx服务器不太稳定，尝试使用日本 <a href="http://fullrss.net/" target="_blank" rel="external">http://fullrss.net/</a> 的服务，“深夜食堂”全文RSS地址：<a href="http://fullrss.net/a/http/feed43.com/zhihustory.xml" target="_blank" rel="external">http://fullrss.net/a/http/feed43.com/zhihustory.xml</a> ，吐槽的全文RSS暂时遇到麻烦。</p>
+<p>更新：<br>1，经过两天的测试，发现该<a href="http://youzhihu.com/section/1" target="_blank" rel="external">站点的“深夜食堂”栏目</a>有些不稳定，会偶尔出现没有抓取到的情况，这是该站点的问题，我会联系作者尽快解决。<br><del>2，顺便做了一个“瞎扯-如何正确的吐槽”的全文RSS输出：<a href="http://feedex.net/feed/feed43.com/tucao.xml" target="_blank" rel="external">http://feedex.net/feed/feed43.com/tucao.xml</a><br>3，上次居然忘了写“深夜食堂”的全文输出地址，真是惭愧，现在补上：<a href="http://feedex.net/feed/feed43.com/zhihustory.xml" target="_blank" rel="external">http://feedex.net/feed/feed43.com/zhihustory.xml</a></del></p>
 <hr>
 <p><strong>就这样吧，互联网给生活带来的改变不光是阅读方式上的，还是创造方式上的。生活总是可以有许多的点子，好的点子会让你感受到美好。</strong></p>
 <p><strong>Jas0ndyq敬上</strong></p>
