@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="apple-touch-icon" href="http://img03.taobaocdn.com/imgextra/i3/665732193/TB2WWWwapXXXXaDXpXXXXXXXXXX_!!665732193.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="http://img03.taobaocdn.com/imgextra/i3/665732193/TB2WWWwapXXXXaDXpXXXXXXXXXX_!!665732193.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="http://img03.taobaocdn.com/imgextra/i3/665732193/TB2PSuCapXXXXXqXXXXXXXXXXXX_!!665732193.png" /> 
+  
+<script type="text/javascript">
+	var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+	document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fb9ab8c85f88622eb244623bc2a0c81cf' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+  <meta charset="utf-8">
+  
+  <title>Jas0ndyq</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="ng-notify
+A simple, lightweight module for displaying notifications in your AngularJS app.
+Both JS and CSS files combine for &lt; 4 kBs.
+IE8+ and the latest versions of Chrome, FireFox and Safari have">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Jas0ndyq">
+<meta property="og:url" content="http://jas0n.me/resume/bower/components/ng-notify/README.html">
+<meta property="og:site_name" content="Jas0ndyq">
+<meta property="og:description" content="ng-notify
+A simple, lightweight module for displaying notifications in your AngularJS app.
+Both JS and CSS files combine for &lt; 4 kBs.
+IE8+ and the latest versions of Chrome, FireFox and Safari have">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Jas0ndyq">
+<meta name="twitter:description" content="ng-notify
+A simple, lightweight module for displaying notifications in your AngularJS app.
+Both JS and CSS files combine for &lt; 4 kBs.
+IE8+ and the latest versions of Chrome, FireFox and Safari have">
+
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+  <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="upper">
+	<p class="name"><a href="http://jas0n.me">Jas0n</a></p>
+	<nav class="header-menu1">
+		<ul class="main1">
+			<a href="/">博客</a>
+			<a href="/archives">文章</a>
+			<a href="http://www.weibo.com/jasondyq">微博</a>
+			<a href="https://twitter.com/jasondyq">Twitter</a>
+			<a href="mailto:jas0n@jas0n.me">邮箱</a>
+			<a href="/about/about.html">关于</a>
+			<a href="/other/index">其他</a>
+		</ul>
+	</nav>
+
+</div>
+
+
+
+    </div>
+    <div class="mid-col">
+      
+      <article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/resume/bower/components/ng-notify/README.html" class="article-date">
+  	<time datetime="2015-06-20T13:53:02.000Z" itemprop="datePublished">6月20日</time>
+</a>
+      
+      
+    </div>
+  
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="ng-notify">ng-notify</h1>
+<p>A simple, lightweight module for displaying notifications in your AngularJS app.</p>
+<p>Both JS and CSS files combine for &lt; 4 kBs.</p>
+<p>IE8+ and the latest versions of Chrome, FireFox and Safari have been tested and are supported.  If you do run across any issues, please submit a <a href="https://github.com/matowens/ng-notify/issues" target="_blank" rel="external">new issue</a> and I’ll take a look.</p>
+<p>You can check out the demo here: <a href="http://matowens.github.io/ng-notify" target="_blank" rel="external">http://matowens.github.io/ng-notify</a></p>
+<p>New in v0.4.0 are <strong>sticky notifications</strong>.  When enabled, notifications won’t fade out until the user dismisses them.  This, too, can be set as a default option for all notifications or just set for individual notifications on a case by case basis.  For more on how to use this sticky feature, check out the <a href="#sticky-notifications">Sticky Notifications</a> section below.  For more on updates, head on over to the <a href="https://github.com/matowens/ng-notify/blob/master/CHANGELOG.md" target="_blank" rel="external">changelog</a>.</p>
+<h1 id="Implementation">Implementation</h1>
+<h3 id="Requirements">Requirements</h3>
+<p>AngularJS is the only dependency.  Animation is achieved with pure JS, jQuery not necessary.</p>
+<h3 id="Installation">Installation</h3>
+<p>You can install ng-notify with Bower.</p>
+<pre><code>bower <span class="operator"><span class="keyword">install</span> ng-notify <span class="comment">--save</span></span>
+</code></pre><p>You can also download source files straight from this repo, they’re located in the <code>dist</code> dir.  Just include the minified version of both js and css files.</p>
+<h3 id="Usage">Usage</h3>
+<p>After including <em>ng-notify.min.js</em> and <em>ng-notify.min.css</em>, inject the ng-notify provider into your project.</p>
+<pre><code><span class="reserved">var</span> app = angular.<span class="built_in">module</span>(<span class="string">'demo'</span>, [<span class="string">'ngNotify'</span>]);
+</code></pre><p>Now you can trigger notifications from anywhere in your app.  To display a notification, just use the <code>set</code> method.</p>
+<pre><code>ngNotify.<span class="keyword">set</span>(<span class="string">'Your notification message goes here!'</span>);
+</code></pre><p>To specify the <em>type</em> of notification to display, provide the optional <em>type</em> param. (For available types, check the <a href="#definitions">definitions</a> below.)</p>
+<pre><code>ngNotify.<span class="keyword">set</span>(<span class="string">'Your error message goes here!'</span>, <span class="string">'error'</span>);
+</code></pre><h1 id="Advanced_Usage">Advanced Usage</h1>
+<h3 id="Default_Configuration">Default Configuration</h3>
+<p>You can override the default options for all notifications by using the <code>config</code> method.  None of these options are required. (For available options, check the <a href="#definitions">definitions</a> below.)</p>
+<pre><code><span class="tag">ngNotify</span><span class="class">.config</span>(<span class="rules">{
+    <span class="rule"><span class="attribute">theme</span>:<span class="value"> <span class="string">'pure'</span>,
+    position: <span class="string">'bottom'</span>,
+    duration: <span class="number">3000</span>,
+    type: <span class="string">'info'</span>,
+    sticky: false
+</span></span></span>});
+</code></pre><h3 id="Individual_Configurations">Individual Configurations</h3>
+<p>You can also pass an object of options to individual notifications.  You can pass through any combination of our available options here as well.  (For available options, check the <a href="#definitions">definitions</a> below.)  For example:</p>
+<pre><code>ngNotify<span class="built_in">.</span><span class="built_in">set</span>(<span class="string">'Your first message.'</span>, {
+    position: <span class="string">'top'</span>,
+    sticky: <span class="literal">true</span>
+});
+
+ngNotify<span class="built_in">.</span><span class="built_in">set</span>(<span class="string">'Your second message.'</span>, {
+    <span class="keyword">type</span>: <span class="string">'error'</span>,
+    <span class="built_in">duration</span>: <span class="number">2000</span>
+});
+
+ngNotify<span class="built_in">.</span><span class="built_in">set</span>(<span class="string">'Your third message.'</span>, <span class="string">'error'</span>); <span class="comment">// Original use case still works, too.</span>
+
+ngNotify<span class="built_in">.</span><span class="built_in">set</span>(<span class="string">'Your fourth message.'</span>, {
+    theme: <span class="string">'pitchy'</span>
+});
+</code></pre><h3 id="Sticky_Notifications">Sticky Notifications</h3>
+<p>Sticky notifications allow you to set a perisistant notification that doesn’t fade away.  To do this, simply set the <code>sticky</code> attribute to true:</p>
+<pre><code>ngNotify.<span class="keyword">set</span>(<span class="string">'This is sticky.'</span>, {
+    sticky: <span class="keyword">true</span>
+});
+</code></pre><p>This will give the user the option of closing the notification themselves.  If you need to dismiss a notification manually, you can do so with the <code>dismiss</code> method like this:</p>
+<pre><code>ngNotify.dismiss();
+</code></pre><p><em>Any time a notification is set to sticky, the duration attribute will be ignored since the notification will not be automatically fading out.</em></p>
+<h3 id="Roll_Your_Own">Roll Your Own</h3>
+<p>There are two additional methods that allow you to create your own types and themes.</p>
+<h5 id="Custom_Notification_Types">Custom Notification Types</h5>
+<p>Creating a custom type will allow you to add additional types of notifications to use throughout your application.  To create a new type, use the <code>addType</code> method.  The first param is the <em>name</em> you’ll use to reference your new type.  The second param is the <em>class</em> you’ll use to style your new notification type.</p>
+<pre><code>ngNotify.addType(<span class="symbol">'notic</span>e', <span class="symbol">'my</span>-notice-<span class="keyword">type</span>');
+</code></pre><p>Then you can set any of your notifications up to use that type as you would any other, triggering it by using the name you gave it.</p>
+<pre><code>ngNotify.set(<span class="attribute">'This</span> notification <span class="keyword">is</span> using our <span class="keyword">new</span> <span class="keyword">type</span>!', <span class="attribute">'notice</span>');
+</code></pre><p>To style your new type, pick a color you’d like to use and set it to the background color of your new style.</p>
+<pre><code>.my-notice-type
+    background-<span class="keyword">color</span>: <span class="preprocessor">#ABC123</span>
+</code></pre><h5 id="Custom_Themes">Custom Themes</h5>
+<p>Creating a custom theme will allow you to build an entirely new spectrum of notification messages utilizing the existing notification types.  To create a new theme, use the <code>addTheme</code> method.  The first param is the <em>name</em> you’ll use to reference your new theme.  The second param is the <em>class</em> you’ll use to style your new theme’s notification types.</p>
+<pre><code>ngNotify.addTheme(<span class="symbol">'newThem</span>e', <span class="symbol">'my</span>-<span class="keyword">new</span>-theme');
+</code></pre><p>Now you can activate your new theme via the config method, using the name you previously assigned to it.</p>
+<pre><code><span class="tag">ngNotify</span><span class="class">.config</span>(<span class="rules">{
+    <span class="rule"><span class="attribute">theme</span>:<span class="value"> <span class="string">'newTheme'</span>
+</span></span></span>});
+</code></pre><p>To style your new theme, pick a collection of colors you’d like to use for each notification type and set them to each type’s background color.</p>
+<pre><code>.my-<span class="keyword">new</span>-theme.ngn-info
+    background-color: <span class="preprocessor">#0033CC</span>
+
+.my-<span class="keyword">new</span>-theme.ngn-<span class="keyword">error</span>
+    background-color: <span class="preprocessor">#FF0000</span>
+
+.my-<span class="keyword">new</span>-theme.ngn-success
+    background-color: <span class="preprocessor">#00CC00</span>
+
+.my-<span class="keyword">new</span>-theme.ngn-warn
+    background-color: <span class="preprocessor">#FF9900</span>
+
+.my-<span class="keyword">new</span>-theme.ngn-grimace
+    background-color: <span class="preprocessor">#660099</span>
+</code></pre><h5 id="Custom_Styles">Custom Styles</h5>
+<p>The position, size, color, alignment and more are all styled based on the notification’s classes and are all specified in the CSS file. See the <a href="#styles">style definitions</a> below to see which classes can be used to override any of the styles within your own application.</p>
+<h1 id="Definitions">Definitions</h1>
+<h3 id="Methods">Methods</h3>
+<h4 id="set(message,_type)">set(message, type)</h4>
+<p>displays a notification message and sets the formatting/behavioral options for this one notification.</p>
+<ul>
+<li><strong>message</strong>: <em>string</em> - <em>required</em> - the message to display in your notification.</li>
+<li><strong>type</strong>: <em>string</em> - <em>optional</em> - the type of notification to display.<ul>
+<li>info <em>(default)</em></li>
+<li>error</li>
+<li>success</li>
+<li>warn</li>
+<li>grimace</li>
+</ul>
+</li>
+</ul>
+<h4 id="config(options)">config(options)</h4>
+<p>sets default settings for all notifications to take into account when displaying.</p>
+<ul>
+<li><strong>options</strong> - <em>object</em> - an object of options that overrides the default settings.<ul>
+<li><strong>theme</strong>: <em>string</em> - <em>optional</em> - sets the theme to use, altering the styles for each notification type.<ul>
+<li>pure <em>(default)</em></li>
+<li>prime</li>
+<li>pastel</li>
+<li>pitchy</li>
+</ul>
+</li>
+<li><strong>type</strong>: <em>string</em> - <em>optional</em> - sets the default notification type when a type isn’t explicitly set.<ul>
+<li>info <em>(default)</em></li>
+<li>error</li>
+<li>success</li>
+<li>warn</li>
+<li>grimace</li>
+</ul>
+</li>
+<li><strong>position</strong>: <em>string</em> - <em>optional</em> - sets where the notifications will be displayed at in the app.<ul>
+<li>bottom <em>(default)</em></li>
+<li>top</li>
+</ul>
+</li>
+<li><strong>duration</strong>: <em>integer</em> - <em>optional</em> - the duration the notification stays visible to the user, in milliseconds.</li>
+<li><strong>sticky</strong>: <em>bool</em> - <em>optional</em> - determines whether or not the message will fade at the end of the duration or if the message will persist until the user dismisses it themselves.  when true, duration will not be set, even if it has a value. <em>(false by default)</em>.</li>
+</ul>
+</li>
+</ul>
+<h4 id="dismiss()">dismiss()</h4>
+<p>manually dismisses any sticky notifications that may still be set.</p>
+<h4 id="addType(name,_class)">addType(name, class)</h4>
+<p>allows a dev to create a new type of notification to use in their app.</p>
+<ul>
+<li><strong>name</strong>: <em>string</em> - <em>required</em> - the name used to trigger this notification type in the <em>set</em> method.</li>
+<li><strong>class</strong>: <em>string</em> - <em>required</em> - the class used to target this type in the stylesheet.</li>
+</ul>
+<h4 id="addTheme(name,_class)">addTheme(name, class)</h4>
+<p>allows a dev to create a whole new set of styles for each notification type.</p>
+<ul>
+<li><strong>name</strong>: <em>string</em> - <em>required</em> - the name used when setting the theme in the <em>config</em> object.</li>
+<li><strong>class</strong>: <em>string</em> - <em>required</em> - the class used to target this theme in the stylesheet.</li>
+</ul>
+<h3 id="Styles">Styles</h3>
+<ul>
+<li><p><strong>primary</strong>: the class that’s present on every notification and controls all of the primary styles.</p>
+<ul>
+<li><em>.ngn</em> </li>
+</ul>
+</li>
+<li><p><strong>position</strong>: purely responsible for where notifications are displayed.  <em>default is set to bottom, one is present on every notification.</em></p>
+<ul>
+<li><em>.ngn-top</em></li>
+<li><em>.ngn-bottom</em> </li>
+</ul>
+</li>
+<li><p><strong>types</strong>: default classes for setting each notification type’s background color.  <em>default is set to info, one is present on every notification.</em></p>
+<ul>
+<li><em>.ngn-info</em></li>
+<li><em>.ngn-error</em></li>
+<li><em>.ngn-success</em></li>
+<li><em>.ngn-warn</em></li>
+<li><em>.ngn-grimace</em></li>
+</ul>
+</li>
+<li><p><strong>themes</strong>: theme specific classes that are chained together with type classes to override default background colors.  <em>not always present, default excludes all of these.</em></p>
+<ul>
+<li><em>.ngn-prime</em></li>
+<li><em>.ngn-pastel</em></li>
+<li><em>.ngn-pitchy</em></li>
+</ul>
+</li>
+<li><p><strong>sticky</strong>: styles responsible for displaying the dismissal button for sticky notifications.</p>
+<ul>
+<li><em>.ngn-sticky</em> - displays the dismissal button when sticky is enabled.</li>
+<li><em>.ngn-dismiss</em> - styles the dismissal button.</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+    </footer>
+  </div>
+  
+    
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina">微博</a>
+		<a class="jiathis_button_weixin">微信</a>
+		<a class="jiathis_button_qzone">空间</a>
+		<a class="jiathis_button_pocket">Pocket</a>
+		<a class="jiathis_button_copy">网址</a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank">更多</a>
+		<a class="jiathis_counter_style"></a>
+	</div>
+	<script "text/javascript">
+		var jiathis_config = {
+			ralateuid:{
+				"tsina":"爱薇薇"
+				}
+		}
+	</script> 
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1409496172051494" charset="utf-8">
+
+	</script>
+	<!-- JiaThis Button END -->	
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="undefined" data-title="" data-url="http://jas0n.me/resume/bower/components/ng-notify/README.html"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"jas0n"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+      <div class="footer-left">
+        &copy; 2015 Jas0ndyq 
+       
+      </div>
+      <br />
+      <div class="CC">
+               <div class="mykey">
+        ♥ Standing on the Shoulders of Giants
+      </div>
+      </div>
+      
+    	
+      <br />
+
+
+
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>
