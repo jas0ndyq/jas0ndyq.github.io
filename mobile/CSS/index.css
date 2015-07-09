@@ -1,0 +1,172 @@
+body {
+  background-color: #f5f5f5;
+}
+.panel-default > .panel-heading {
+  background-image: none;
+  background-color: white;
+}
+.panel-title{
+  color: #7f7f7f;
+}
+.panel-heading {
+  text-align: left;
+}
+/*导航栏样式*/
+.footerBarIcons {
+	display: flex;
+	margin-top: 1em; 
+}
+.footerBarIcon {
+	flex: 1 0 10%;
+  display: inline-block;
+  -webkit-box-flex: 1;
+  text-align: center;
+  font-size: 1.5em;
+  color: rgb(74, 74, 74);
+}
+
+/*搜索框样式*/
+.searchBar {
+  margin-top: 1em;
+}
+#searchButton {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/*图片轮播样式：图片待加入*/
+.item {
+  height: 15em;
+}
+.item_1{
+  background-color: gray;
+}
+.item_2 {
+  background-color: white;
+}
+.item_3 {
+  background-color: #62B1DA;
+}
+
+/*主题推荐样式*/
+
+.recommendActivity {
+  margin-top: 1em;
+  text-align: center;
+}
+
+/*活动票价样式*/
+.recommendTickets {
+  /*margin-bottom: 20em;*/
+  margin-top: 1em;
+  text-align: center;
+}
+
+.recommendTicket {
+  margin-bottom: 1em;
+
+}
+
+p.ticketInfo {
+  text-align: center;
+  margin: 0 auto;
+  font-weight: bold;
+
+}
+
+.regionName {
+  margin-right: 2.5em;
+}
+
+/*景区门票样式*/
+.regionTickets {
+  margin-top: 2em;
+  margin-bottom: 10em;
+}
+
+.regionTicket{
+  margin-bottom: 10em;
+}
+.leftImage {
+  width: 30%;
+  float: left;
+}
+.rightInfo {
+  width: 70%;
+  float: right;
+}
+
+.ticketPrice {
+  font-size: 1.5em;
+  color: #C00;
+}
+.olderPrice {
+  font-size: 1em;
+  color: #999;
+}
+
+.priceBar {
+  float: right;
+}
+
+/*响应式设计：媒体查询（根据宽度改变样式
+http://v2.bootcss.com/scaffolding.html#responsive）*/
+@media (min-width: 1200px){
+  .container {
+    width: 100%;
+  }
+  p.ticketInfo {
+  width: 50%;
+  }
+}
+
+@media (min-width: 415px) {
+    p.ticketInfo {
+  width: 70%;
+  }
+}
+
+@media (max-width: 320px){
+  .recommendTicket img{
+    width: 8em;
+  }
+}
+@media (min-width: 480px) and (max-width: 991px) {
+  .regionTicket{
+  margin-bottom: 17em;
+}
+}
+
+/*详情.html样式*/
+.detailNav {
+  background-color: #d85400;
+  background-image: none;
+  border-radius: 0;
+  border: none;
+  font-size: 1.2em;
+  color: white;
+}
+
+.returnBackBar {
+  margin-top: 1em;
+  text-align: center;
+}
+.returnBackBar .navbar-header {
+  margin-left: 1em;
+  display: inline-block;
+  float: left;
+
+}
+
+.navTitle {
+  text-align: center;
+  display: inline-block;
+}
+
+.productImage {
+  margin-top: 3em;
+}
+
+.productImageFull {
+  background-color: #333;
+}
