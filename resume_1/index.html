@@ -15,49 +15,15 @@
   <title>Jas0ndyq</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta content="邓扬秋, 禾火, 邓扬秋的博客, 禾火的博客, jasondyq, jas0n, jasondyq的博客, jas0n的博客" name="keywords">
-  <meta name="description" content="DeerResume
-
-最好用的MarkDown在线简历工具，可在线预览、编辑、设置访问密码和生成PDF
-
-可自行搭建，任意修改页面样式和风格
-免安装，可放置于任何支持静态页面的云和服务器（当然包括GitHub
-在线MarkDown编辑器+实时预览
-在浏览器中实时保存草稿
-支持阅读密码，您可以直接将网址和密码发送，供招聘方在线浏览
-一键生成简单雅致的PDF，供邮件发送及打印
-
-免部署的在线版本：">
+  <meta name="description" content="DeerResume">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Jas0ndyq">
-<meta property="og:url" content="http://jas0n.me/my_resume/README.html">
+<meta property="og:url" content="http://jas0n.me/resume_1/index.html">
 <meta property="og:site_name" content="Jas0ndyq">
-<meta property="og:description" content="DeerResume
-
-最好用的MarkDown在线简历工具，可在线预览、编辑、设置访问密码和生成PDF
-
-可自行搭建，任意修改页面样式和风格
-免安装，可放置于任何支持静态页面的云和服务器（当然包括GitHub
-在线MarkDown编辑器+实时预览
-在浏览器中实时保存草稿
-支持阅读密码，您可以直接将网址和密码发送，供招聘方在线浏览
-一键生成简单雅致的PDF，供邮件发送及打印
-
-免部署的在线版本：">
-<meta property="og:image" content="http://www.jobdeer.com/img/rd.png">
+<meta property="og:description" content="DeerResume">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Jas0ndyq">
-<meta name="twitter:description" content="DeerResume
-
-最好用的MarkDown在线简历工具，可在线预览、编辑、设置访问密码和生成PDF
-
-可自行搭建，任意修改页面样式和风格
-免安装，可放置于任何支持静态页面的云和服务器（当然包括GitHub
-在线MarkDown编辑器+实时预览
-在浏览器中实时保存草稿
-支持阅读密码，您可以直接将网址和密码发送，供招聘方在线浏览
-一键生成简单雅致的PDF，供邮件发送及打印
-
-免部署的在线版本：">
+<meta name="twitter:description" content="DeerResume">
 
   
   
@@ -94,8 +60,8 @@
       <article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/my_resume/README.html" class="article-date">
-  	<time datetime="2015-08-30T03:44:35.000Z" itemprop="datePublished">8月30日</time>
+      <a href="/resume_1/index.html" class="article-date">
+  	<time datetime="2015-08-30T04:07:34.000Z" itemprop="datePublished">8月30日</time>
 </a>
       
       
@@ -105,28 +71,43 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="DeerResume">DeerResume</h1>
-<p><img src="http://www.jobdeer.com/img/rd.png" alt="img"></p>
-<p>最好用的MarkDown在线简历工具，可在线预览、编辑、设置访问密码和生成PDF</p>
-<ul>
-<li>可自行搭建，任意修改页面样式和风格</li>
-<li>免安装，可放置于任何支持静态页面的云和服务器（当然包括GitHub</li>
-<li>在线MarkDown编辑器+实时预览</li>
-<li>在浏览器中实时保存草稿</li>
-<li>支持阅读密码，您可以直接将网址和密码发送，供招聘方在线浏览</li>
-<li>一键生成简单雅致的PDF，供邮件发送及打印</li>
-</ul>
-<p>免部署的在线版本： → <a href="http://cvbox.sinaapp.com/" target="_blank" rel="external">http://cvbox.sinaapp.com/</a></p>
-<p>Demo → <a href="http://easy.digitcv.com/" target="_blank" rel="external">http://easy.digitcv.com/</a>  </p>
-<p>部署指南：→ <a href="http://get.jobdeer.com/745.get" target="_blank" rel="external">http://get.jobdeer.com/745.get</a></p>
-<p>教学：《如何写好一份技术简历》 → <a href="http://get.jobdeer.com/744.get" target="_blank" rel="external">http://get.jobdeer.com/744.get</a></p>
-<h3 id="FAQ">FAQ</h3>
-<p>如何在没有云端的情况下使用DeerResume？</p>
-<ul>
-<li>请在可访问云端的情况下完成MarkDown的编辑，然后复制好简历内容。</li>
-<li>修改app.js 注释掉第3行，打开第4行，将数据源切到本地。 </li>
-<li>修改data.php 填入标题和内容，并按自己的需要设置阅读密码。</li>
-</ul>
+        <!DOCTYPE html>
+<html ng-app="deerResume">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DeerResume</title>
+  <link href="image/browser.png" rel="shortcut icon">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/yue.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="bower/components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bower/components/ng-notify/dist/ng-notify.min.css">
+  <script src="bower/components/jquery/dist/jquery.min.js"></script>
+  <script src="bower/components/angular/angular.min.js"></script>
+  <script src="bower/components/angular-route/angular-route.min.js"></script>
+  <script src="bower/components/angular-sanitize/angular-sanitize.min.js"></script>
+  <script src="bower/components/showdown/compressed/showdown.js"></script>
+  <script src="bower/components/ng-notify/dist/ng-notify.min.js"></script>
+  <script src="js/wizMarkdown.min.js"></script>
+  <script src="js/jspdf.min.js"></script>
+  <script src="js/jspdf.plugin.addhtml.js"></script>
+  <script src="bower/components/angular-cookies/angular-cookies.min.js"></script>
+  <script src="bower/components/angularLocalStorage/src/angularLocalStorage.js"></script>
+  <script src="js/app.js"></script>
+</head>
+<body>
+  <base target="_blank">
+  <div ng-view="" id="resume_body"></div>
+  <form action="http://pdf.ftqq.com" method="post" target="_blank" id="hform">
+    <input type="hidden" name="title">
+    <input type="hidden" name="subtitle">
+    <input type="hidden" name="content">
+    <input type="hidden" name="pdfkey">
+  </form>  
+</body>
+
+</html>
 
       
     </div>
@@ -170,7 +151,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="undefined" data-title="" data-url="http://jas0n.me/my_resume/README.html"></div>
+	<div class="ds-thread" data-thread-key="undefined" data-title="" data-url="http://jas0n.me/resume_1/index.html"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
