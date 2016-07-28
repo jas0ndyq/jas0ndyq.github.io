@@ -134,4 +134,21 @@
 
     $container.removeClass('mobile-nav-on');
   });
+
+  /*
+    add by jason@2016/7/28
+  */
+  (function () {
+    var _url = window.location,
+        _pathName = _url.pathname,
+        $share = $(".share"),
+        $duoshuo = $(".duoshuo"),
+        $articleMeta = $(".article-meta");
+    if(_pathName && _pathName === '/about/about.html') {
+      $share.remove();
+      $duoshuo.remove();
+      $articleMeta.remove();
+    }
+  }());
+
 })(jQuery);
