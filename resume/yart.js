@@ -48,9 +48,9 @@ var resumeMarkdownParser = function (rawInput) {
 			_htmlTag = 'div';
 			_htmlTagClassList.add('subsection-tagline');
 			_htmlText = _ast[i].slice(3)._parseMarkdownAnchor();
-		} else if (_ast[i].beginWith('====')) {
+		} else if (_ast[i].beginWith('==')) {
 			_htmlTag = 'div';
-			_htmlTagClassList.add(['page-break', 'page-start']);
+			_htmlTagClassList.add(['mt-20', 'mb-20']);
 			_htmlText = '';
 		} else {
 			_htmlTag = 'p';
